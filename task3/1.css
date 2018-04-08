@@ -1,9 +1,24 @@
-body {background-color:#68cdd5;
-    margin: 0;
+body {
+    background-color: #68cdd5;
     width: 100%;
     height: 100%;
-     
+    margin: 0;
 }
-div {float:left;
-clear:right;
+
+div {
+    float: left;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+.header {
+    width: 100%;
+    text-Align: center;
+    float: left;
+    clear: both;
+}
+
+.p {
+    float: none;
+
 }
