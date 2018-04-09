@@ -1,0 +1,71 @@
+body {
+    background-color: #68cdd5;
+    margin: 0;
+}
+
+.boult {
+    margin: 10px 0 0 17.5px;
+}
+
+.picture {
+    display: block;
+    width: 27px;
+}
+
+.box {
+    text-align: center;
+    margin: 21px 0;
+}
+
+.header {
+    width: 90.5px;
+    height: 35px;
+}
+
+.explain {
+    width: 70%;
+    margin: 60.5px auto;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 27.11px;
+    letter-spacing: 0.5px;
+}
+
+.logo-left {
+    float: left;
+    margin: 41px 0 0 21%;
+}
+
+.logo-picture {
+    display: block;
+    width: 42px;
+}
+
+.name {
+    margin-left: -19%;
+    color: #ffffff;
+    line-height: 12.71px;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+}
+
+.logo-right {
+    float: right;
+    margin: 41px 0;
+}
+
+.other-picture {
+    width: 42px;
+    float: right;
+    margin-right: 3.843em;
+}
+
+.english-name {
+    color: #ffffff;
+    line-height: 12.71px;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    float: right;
+    clear: right;
+    padding-right: 4.2em;
+}
