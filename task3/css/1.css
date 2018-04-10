@@ -24,48 +24,49 @@ body {
 
 .explain {
     width: 70%;
-    margin: 60.5px auto;
+    margin: 60.5px auto 101.5px;
     color: #ffffff;
     font-size: 14px;
     line-height: 27.11px;
     letter-spacing: 0.5px;
 }
 
-.logo-left {
-    float: left;
-    margin: 41px 0 0 21%;
-}
 
 .logo-picture {
-    display: block;
+    position: absolute;
+    left: 25%;
+    transform: translate(-50%,0);
     width: 42px;
 }
 
 .name {
-    margin-left: -19%;
+    position: absolute;
+    left: 25%;
+    transform: translate(-50%,0);
     color: #ffffff;
     line-height: 12.71px;
     letter-spacing: 0.5px;
     font-size: 12px;
+    margin-top: 4em;
 }
 
-.logo-right {
-    float: right;
-    margin: 41px 0;
-}
 
 .other-picture {
+    position: absolute;
+    transform: translate(50%,0);
+    right: 25%;
     width: 42px;
-    float: right;
-    margin-right: 3.843em;
+    
+   
 }
 
 .english-name {
+    position: absolute;
+    right: 25%;
+    transform: translate(50%,0);
     color: #ffffff;
     line-height: 12.71px;
     letter-spacing: 0.5px;
     font-size: 12px;
-    float: right;
-    clear: right;
-    padding-right: 4.2em;
+    margin-top: 4em;
 }
