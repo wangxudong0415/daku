@@ -81,7 +81,7 @@ body {
 
 ul {
     list-style-type: none;
-    margin: 0;
+    margin: 0 0 3.75rem;
     padding-left: 1.875rem;
 }
 
@@ -145,5 +145,33 @@ li {
 }
 .brief-introduction {
     font-size: 0.875rem;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    height: 3.75rem;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #fff;
+    
+    
+}
+.leave-word {
+    width: 43%;
+    height: 73%;
+    border: #5fc0cd solid 0.15rem;
+    border-radius: 5%;
+    color: #5fc0cd;
+    background-color: #fff
+}
+.telephone {
+    width: 43%;
+    height: 73%;
+    background-color: #5fc0cd;
+    border: none;
+    border-radius: 5%;
+    color: #fff
 
 }
