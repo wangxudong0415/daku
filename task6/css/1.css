@@ -1,12 +1,13 @@
 body {
     margin: 0;
 }
-ul,li {
+
+ul,
+li {
     list-style: none;
     margin: 0;
     padding: 0;
 }
- 
 
 .header {
     position: fixed;
@@ -24,7 +25,7 @@ ul,li {
 }
 
 .button-style {
-    width: 50%;
+    padding: 0 1rem;
     height: 2.18rem;
     outline: none;
     border-radius: 0.625rem;
@@ -41,37 +42,134 @@ ul,li {
     color: #5fc0cd;
     background-color: #fff;
 }
+
 .location {
     position: absolute;
     right: 1rem;
     width: 1.3rem;
 }
+
 .blank-box1 {
     height: 2.75rem;
 }
-    
 
 .down-list {
     list-style: none;
     display: flex;
     height: 2.5rem;
     justify-content: center;
-   
-    
-} 
+    color: #999;
+    font-size: 0.875rem;
+}
+
 .list {
     line-height: 2.5rem;
     width: 33.3%;
     text-align: center;
     position: relative;
 }
+
 .hide {
-    display: none; 
+    display: none;
     position: absolute;
     width: 100%;
     text-align: center;
-    
-}    
+    background-color: #5fc0cd;
+    color: #fff;
+}
+
 .list:hover>ul {
     display: block;
+}
+
+.list1:hover {
+    background-color: #55a8b3;
+}
+
+.list2:hover {
+    background-color: #55a8b3;
+}
+
+.triangle-down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: .25rem solid transparent;
+    border-right: .25rem solid transparent;
+    border-top: .25rem solid #afbac0;
+    position: absolute;
+    right: 5%;
+    top: 1.25rem;
+}
+
+.separator {
+    border-image: linear-gradient(#fff, #e2e6e7, #fff) 1 1;
+    border-left: solid 1px;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background: #e1e5e7;
+}
+
+.big-list {
+    padding-left: 1rem;
+}
+
+.big-list-li {
+    height: 5.625rem;
+    display: flex;
+    align-items: center;
+}
+
+.calendar {
+    background: url(../img/img.png) no-repeat;
+    background-position-y: 0.35rem;
+    font-size: .875rem;
+    color: #999;
+}
+
+.small-list {
+    line-height: 1.5rem;
+    width: 100%;
+}
+
+.small-list>li {
+    padding-left: 1.2rem;
+}
+
+.shape {
+    background: url(../img/img.png) no-repeat;
+    background-position: 0.08rem -2.2rem;
+    font-size: .8rem;
+    color: #999;
+}
+
+.float-right {
+    float: right;
+    color: red;
+}
+
+.corner {
+    width: .625rem;
+    vertical-align: middle;
+    margin: 0 1rem 0 0.3rem;
+}
+
+span {
+    vertical-align: middle;
+}
+
+.font-size {
+    font-size: 0.95rem;
+   
+}
+p {
+    margin: 0;
+}
+.zoom {
+    overflow:hidden;
+white-space:nowrap; 
+    text-overflow:ellipsis; 
 }
