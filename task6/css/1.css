@@ -112,12 +112,12 @@ li {
     height: 1px;
     width: 100%;
     background: #e1e5e7;
-    margin-top: 5.25rem;
     position: fixed;
 }
 
 .big-list {
     padding-left: 1rem;
+    margin-top: 5.25rem;
 }
 
 .big-list-li {
@@ -176,4 +176,10 @@ p {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.lien1 {
+    height: 1px;
+    width: 100%;
+    background: #e1e5e7;
 }
