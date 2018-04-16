@@ -4,32 +4,22 @@ body {
 }
 
 header {
-    position: relative;
+    display: flex;
     height: 2.75rem;
     color: #fff;
     background-color: #5fc0cd;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .left {
-    line-height: 2.75rem;
-    margin: auto 0;
-    float: left;
-    margin-left: 0.93rem;
+   margin-left: 1rem;
 }
 
-.center {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate( -50%, -50%);
-    margin: 0;
-}
+
 
 .right {
-    line-height: 2.75rem;
-    margin: 0;
-    float: right;
-    margin-right: 0.93rem;
+    margin-right: 1rem;
 }
 
 .top-box {
@@ -44,12 +34,13 @@ header {
     width: 0.84rem;
 }
 
-input[type="text"] {
+input[type="number"] {
     position: absolute;
     top: 50%;
     border: none;
     transform: translateY(-50%);
     outline: none;
+   
 }
 
 .top-border {
@@ -98,13 +89,15 @@ button {
     border: none;
     font-size: 1.125rem;
     letter-spacing: 0.625rem;
+    outline:none;
+    padding: 0;
 }
 
-a {
+.a {
     float: right;
     margin-right: 1rem;
-    font-size: 1rem;
     color: #5fc0cd;
+   
 }
 ::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */

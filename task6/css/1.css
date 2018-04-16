@@ -105,7 +105,7 @@ li {
 
 .separator {
     border-image: linear-gradient(#fff, #e2e6e7, #fff) 1 1;
-    border-left: solid 1px;
+    border-left: solid 0.06rem;
 }
 
 .line {
