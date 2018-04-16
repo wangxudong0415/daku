@@ -5,16 +5,16 @@ body {
 
 header {
     position: relative;
-    height: 44px;
+    height: 2.75rem;
     color: #fff;
     background-color: #5fc0cd;
 }
 
 .left {
-    line-height: 44px;
+    line-height: 2.75rem;
     margin: auto 0;
     float: left;
-    margin-left: 15px;
+    margin-left: 0.93rem;
 }
 
 .center {
@@ -26,22 +26,22 @@ header {
 }
 
 .right {
-    line-height: 44px;
+    line-height: 2.75rem;
     margin: 0;
     float: right;
-    margin-right: 15px;
+    margin-right: 0.93rem;
 }
 
 .top-box {
     position: relative;
     background-color: #fff;
-    height: 50px;
-    margin: 8px auto 7px;
+    height: 3.125rem;
+    margin: 0.5rem auto 0.43rem;
 }
 
 .iphone {
-    margin: 14.75px 40px 14.75px 22PX;
-    width: 13.5px;
+    margin: 0.92rem 2.5rem 0.92rem 1.375rem;
+    width: 0.84rem;
 }
 
 input[type="text"] {
@@ -53,9 +53,9 @@ input[type="text"] {
 }
 
 .top-border {
-    margin: 0 0 0 58px;
+    margin: 0 0 0 3.625rem;
     position: absolute;
-    padding: 12.75px 0;
+    padding: 0.79rem 0;
     border-left: 1px solid #eff0f4;
     top: 50%;
     transform: translateY(-50%);
@@ -64,13 +64,13 @@ input[type="text"] {
 .down-box {
     position: relative;
     background-color: #fff;
-    height: 50px;
-    margin-bottom: 35px;
+    height: 3.125rem;
+    margin-bottom: 2.18rem;
 }
 
 .locked {
-    margin: 14.75px 40px 14.75px 22PX;
-    width: 13.5px;
+    margin: 0.92rem 2.5rem 0.92rem 1.375rem;
+    width: 0.84rem;
 }
 
 input[type="password"] {
@@ -82,28 +82,28 @@ input[type="password"] {
 }
 
 .down-border {
-    margin: 0 0 0 58px;
+    margin: 0 0 0 3.628rem;
     position: absolute;
-    padding: 12.75px 0;
+    padding: 0.79rem 0;
     border-left: 1px solid #eff0f4;
     top: 50%;
     transform: translateY(-50%);
 }
 
 button {
-    height: 50px;
+    height: 3.125rem;
     width: 100%;
     color: #fff;
     background-color: #5fc0cd;
     border: none;
-    font-size: 18px;
-    letter-spacing: 10px;
+    font-size: 1.125rem;
+    letter-spacing: 0.625rem;
 }
 
 a {
     float: right;
-    margin-right: 15px;
-    font-size: 16px;
+    margin-right: 1rem;
+    font-size: 1rem;
     color: #5fc0cd;
 }
 ::-webkit-input-placeholder {
