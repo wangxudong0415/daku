@@ -17,6 +17,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
+    top: 0;
 }
 
 .button-box {
@@ -49,10 +50,6 @@ li {
     width: 1.3rem;
 }
 
-.blank-box1 {
-    height: 2.75rem;
-}
-
 .down-list {
     list-style: none;
     display: flex;
@@ -60,6 +57,10 @@ li {
     justify-content: center;
     color: #999;
     font-size: 0.875rem;
+    width: 100%;
+    position: fixed;
+    top: 2.75rem;
+    background-color: #fff;
 }
 
 .list {
@@ -111,6 +112,8 @@ li {
     height: 1px;
     width: 100%;
     background: #e1e5e7;
+    margin-top: 5.25rem;
+    position: fixed;
 }
 
 .big-list {
@@ -163,13 +166,14 @@ span {
 
 .font-size {
     font-size: 0.95rem;
-   
 }
+
 p {
     margin: 0;
 }
+
 .zoom {
-    overflow:hidden;
-white-space:nowrap; 
-    text-overflow:ellipsis; 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
