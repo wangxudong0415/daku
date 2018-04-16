@@ -34,13 +34,13 @@ header {
     width: 0.84rem;
 }
 
-input[type="number"] {
+input[type="text"] {
     position: absolute;
     top: 50%;
     border: none;
     transform: translateY(-50%);
     outline: none;
-   
+    
 }
 
 .top-border {

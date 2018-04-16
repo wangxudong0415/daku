@@ -18,7 +18,8 @@
     <div class="top-box">
         <img class="iphone" src="img/iphone.png">
         <div class="top-border"></div>
-        <input type="number" placeholder="请输入手机号">
+        <input type="text" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();"
+            maxlength="11" placeholder="请输入手机号">
     </div>
     <div class="down-box">
         <img class="locked" src="img/locked.png">
@@ -26,9 +27,9 @@
         <input type="password" placeholder="请输入密码">
     </div>
     <button type="button">登陆</button>
-    <a class="a" href="">忘记密码</a> 
+    <a class="a" href="">忘记密码</a>
 
-  
+
 </body>
 
 </html>
