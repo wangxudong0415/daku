@@ -60,7 +60,7 @@ li {
     width: 100%;
     position: fixed;
     top: 2.75rem;
-    background-color: #fff;
+    background-color: #f8fafb;
 }
 
 .list {
@@ -116,7 +116,6 @@ li {
 }
 
 .big-list {
-    padding-left: 1rem;
     margin-top: 5.25rem;
 }
 
@@ -136,6 +135,7 @@ li {
 .small-list {
     line-height: 1.5rem;
     width: 100%;
+    padding-left: 1rem;
 }
 
 .small-list>li {
@@ -165,7 +165,7 @@ span {
 }
 
 .font-size {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
 }
 
 p {
@@ -182,4 +182,34 @@ p {
     height: 1px;
     width: 100%;
     background: #e1e5e7;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: .75rem;
+    height: 3.125rem;
+    position: fixed;
+    background-color: #f8fafb;
+    bottom: 0;
+    width: 100%;
+}
+.house {
+     width: 1.43rem;
+}
+.write {
+     width: 2.93rem;
+}
+.locus {
+     width: 1.31rem;
+}
+.text-align-conter {
+    text-align: center;
+    width: 50%;
+}
+.lien2 {
+    height: 1px;
+    width: 100%;
+    background: #e1e5e7;
+    margin-bottom: 3.125rem;
 }
