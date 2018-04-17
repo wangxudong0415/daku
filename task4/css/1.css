@@ -40,6 +40,7 @@ input[type="text"] {
     border: none;
     transform: translateY(-50%);
     outline: none;
+    width: 70%;
     
 }
 
@@ -70,6 +71,7 @@ input[type="password"] {
     outline: none;
     border: none;
     transform: translateY(-50%);
+    width: 70%;
 }
 
 .down-border {
@@ -97,20 +99,20 @@ button {
     float: right;
     margin-right: 1rem;
     color: #5fc0cd;
-   
+    text-decoration:none;
 }
-::-webkit-input-placeholder {
+input::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
     color: #bababa;
 }
 
-::-moz-placeholder {
+input::-moz-placeholder {
     /* Mozilla Firefox 19+ */
     color: #bababa;
     opacity: 1;
 }
 
-:-ms-input-placeholder {
+input:-ms-input-placeholder {
     /* Internet Explorer 10-11 */
     color: #bababa;
 }

@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+.header {
+    height: 2rem;
+    background-color: #29bde0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    line-height: 2rem;
+}
+.form {
+    
+    margin-left: 1rem;
+    width: 1rem;
+}
