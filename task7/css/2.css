@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #29bde0;
+    color: #fff;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.house {
+    width: 1.625rem;
+    margin-left: .6rem;
+}
+
+.n {
+    width: 1.25rem;
+    margin-right: .6rem;
+}
+
+.lien {
+    position: fixed;
+    width: 100%;
+    height: 0.06rem;
+    margin-top: 2.5rem;
+    background-color: #74d4eb;
+}
+
+.box {
+    height: 19.5rem;
+    background-color: #29bde0;
+}
+
+.box1 {
+    text-align: center;
+}
+
+.victory {
+    margin-top: 1rem;
+    width: 10.9rem;
+}
+
+.over {
+    color: #ffc865;
+    font-size: 1.03rem;
+    padding: 0.5rem 2.7rem;
+    margin: 0;
+}
+
+.box2 {
+    padding: 0.8rem 2.7rem;
+    font-size: 0.79rem;
+    color: #fff;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+ 
+
+.record {
+    padding: .8rem 2.7rem;
+
+
+}
+.first {
+    display: flex;
+    justify-content: space-between;
+
+}
+.size-color1 {
+    font-size: 1rem;
+    color: #515151;
+}
+.size-color2 {
+    font-size: .75rem;
+    color: #d5d5d5;
+}
+.size-color3 {
+    font-size: .875rem;
+    color: #a6a6a6;
+}
+.lien1 {
+    height: .06rem;
+    background-color: #ddd;
+}
