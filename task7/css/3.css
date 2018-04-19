@@ -2,6 +2,13 @@ body {
     margin: 0;
 }
 
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .header {
     width: 100%;
     height: 2rem;
@@ -51,6 +58,7 @@ body {
     transform: rotate(45deg);
     background-color: #fff;
 }
+
 .music {
     height: 2.5rem;
     margin-top: 2rem;
@@ -61,7 +69,116 @@ body {
     padding: 0 1rem;
     font-size: .8rem;
 }
+
 .music>img {
     width: 1.625rem;
     height: 1.625rem;
+}
+
+.backgroung {
+    background-color: #29bde0;
+    height: 2.5rem;
+}
+
+.triangle {
+    margin-left: 1.5rem;
+    width: 0;
+    height: 0;
+    border-left: .4rem solid transparent;
+    border-right: .4rem solid transparent;
+    border-top: .7rem solid #b9e9f5;
+}
+
+.annotation {
+    color: #fff;
+    font-size: .75rem;
+    margin: .3rem 1.5rem 0;
+}
+
+.big-box {
+    position: absolute;
+    background-color: #29bde0;
+}
+
+.head {
+    float: left;
+    width: 33.3%;
+}
+
+.small-box {
+    height: 25vw;
+    width: 25vw;
+    margin: 4vw auto;
+    background-color: #f5c97b;
+    border: #fff solid .15rem;
+    font-size: .9rem;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    justify-content: center;
+    height: 80%;
+}
+
+.number {
+    margin: 0;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #83b09a;
+    color: #fff;
+}
+
+.list {
+    display: none;
+    
+}
+
+.picture-style {
+    margin-top: 1.5vw;
+    width: 5vw;
+    height: 5vw;
+}
+
+.picture1 {
+    background: url(../img/picture.png) no-repeat 0 100% /100%;
+}
+
+.picture2 {
+    background: url(../img/picture.png) no-repeat 0 0 /100%;
+}
+
+.picture3 {
+    background: url(../img/picture.png) no-repeat 0 33.3% /100%;
+}
+
+.picture4 {
+    background: url(../img/picture.png) no-repeat 0 66.6% /100%;
+}
+
+.small-box:hover>ul {
+    display: flex;
+    justify-content: space-between;
+}
+.footer {
+    width: 100%;
+    height: 4.5rem;
+    background-color: #29bde0;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer>p {
+    width: 15.5rem;
+    height: 2.5rem;
+    color: #fff;
+    font-size: 1.25rem;
+    background-color: #fbb435;
+    text-align: center;
+    line-height: 2.5rem;
 }
