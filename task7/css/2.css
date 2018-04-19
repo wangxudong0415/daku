@@ -91,3 +91,32 @@ body {
     height: .06rem;
     background-color: #ddd;
 }
+.footer {
+    height: 4rem;
+    position: fixed;
+    bottom: 0;
+    background-color:rgba(153,223,240,0.5) ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    
+    
+}
+.option {
+    height: 2.68rem;
+    width: 8.46rem;
+    font-size: 1.25rem;
+    margin: 0;
+    text-align: center;
+    line-height: 2.68rem;
+    color: #fff;
+    border-radius: 0.3rem;
+   
+}
+.backgrung-color1 {
+    background-color: #f66f6f;
+}
+.backgrung-color2 {
+    background-color: #fbb435;
+}
