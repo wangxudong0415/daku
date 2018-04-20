@@ -95,15 +95,16 @@ li {
     margin: .3rem 1.5rem 0;
 }
 
-/* .big-box {
+.big-box {
     position: absolute;
     background-color: #29bde0;
-} */
+    padding-bottom: 5rem;
+}
 
 .head {
     float: left;
     width: 33.3%;
-    background-color: #29bde0;
+   
 
 }
 
