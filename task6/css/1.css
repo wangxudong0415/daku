@@ -23,6 +23,7 @@ li {
 .button-box {
     background-color: #55a8b3;
     border-radius: 0.625rem;
+    height: 2.18rem;
 }
 
 .button-style {
@@ -105,7 +106,7 @@ li {
 }
 
 .separator {
-    border-image: linear-gradient(#fff, #e2e6e7, #fff) 1 1;
+    border-image: linear-gradient(#fff, #e2e6e7, #fff) 4;
     border-left: solid 0.06rem;
 }
 
