@@ -19,7 +19,7 @@ body {
     position: relative;
     height: 3.625rem;
     background-color: #fff;
-    
+    z-index: -1;
     color: #9a9a9a;
     font-size: 1.08rem;
     text-align: center;
@@ -47,7 +47,7 @@ body {
     font-size: 1.18rem;
 }
 .line {
-    
+   margin-bottom: 1rem; 
    height: 0.06rem;
    background-color: #fbb435;
 }
@@ -75,7 +75,7 @@ body {
     border-bottom: .85rem solid transparent;
     border-top: .85rem solid transparent;
     right: 8%;
-    top: 18.5rem;
+    top: 19.5rem;
 }
 .paging {
     margin-top: -1rem;
