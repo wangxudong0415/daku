@@ -23,16 +23,17 @@ li {
 .button-box {
     background-color: #55a8b3;
     border-radius: 0.625rem;
-    height: 2.18rem;
+    display: flex;
 }
 
 .button-style {
     padding: 0 1rem;
     height: 2.18rem;
-    outline: none;
+    margin: 0;
     border-radius: 0.625rem;
     font-size: 1rem;
-    border: none;
+    line-height: 2.18rem;
+   
 }
 
 .button1 {
