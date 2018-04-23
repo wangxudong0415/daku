@@ -112,3 +112,40 @@ ul,li {
 .carousel-indicators {
     bottom: 0.1rem;
 }
+
+.rocket {
+    width: 5rem;
+    height: 7rem;
+    background: url(../img/img2.png) no-repeat 0 6.3%/586%;
+    margin: 0 auto;
+}
+.book {
+    width: 7rem;
+    height: 7rem;
+    background: url(../img/img2.png) no-repeat 0 15.3%/420%;
+    margin: 0 auto;
+}
+.people {
+    width: 6rem;
+    height: 7rem;
+    background: url(../img/img2.png) no-repeat 0 11%/489%;
+    margin: 0 auto;
+}
+.man {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url(../img/img2.png) no-repeat 44% 0.3%/1500%;
+}
+.center {
+    text-align: center;
+}
+.synopsis {
+    width: 21rem;
+    color: #999;
+    margin: 0 auto;
+    
+}
+.statistics {
+    border-left: 0.3rem dashed   #999;
+}
