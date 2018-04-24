@@ -314,3 +314,28 @@ li {
     padding: 1rem;
     margin: auto;
 }
+.paging {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.small-circle {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin: 0 0.2rem;
+    display: inline-block;
+    box-shadow: 0 0 0.3rem #888;
+}
+.small-circle1 {
+    background-color: #29b078;
+}
+.small-circle2:hover {
+    background-color: #29b078;
+}
+.small-circle3:hover {
+    background-color: #29b078;
+}
+.small-circle4:hover {
+    background-color: #29b078;
+}
