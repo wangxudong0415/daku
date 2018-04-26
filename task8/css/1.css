@@ -469,6 +469,7 @@ p {
     padding: 2rem 0;
     background-color: #29b078;
     color: #fff;
+    
 }
 
 .font-style1 {
@@ -563,9 +564,7 @@ p {
     }
    
 }
-.footer::after {
-    content: "";
-    width: 100%;
+.line {
     height: 0.15rem;
     background-color: #fff;
 
