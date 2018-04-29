@@ -76,6 +76,7 @@ p {
     padding-right: 0;
 }
 
+
 .log {
     width: 100%;
 }
@@ -85,11 +86,14 @@ p {
 }
 
 .list1 {
-    height: 6.25rem;
+    height: 6.35rem;
     display: inline-block;
     margin: 0 0.8rem;
     font-size: 1.6rem;
     color: #fff;
+}
+.margin-right {
+    margin-right: 0;
 }
 
 .list1:hover {
@@ -384,7 +388,7 @@ p {
 
 .log-box1 {
     display: flex;
-    justify-content: space-between;
+    
     flex-wrap: wrap;
 }
 
@@ -510,7 +514,8 @@ p {
 .code {
     width: 9.5rem;
     height: 9.5rem;
-    background: url(../img/img2.png) no-repeat -2% 20%/248%;
+    margin: auto;
+    background: url(../img/img2.png) no-repeat -1.4% 20.2%/274%;
 }
 
 
@@ -525,7 +530,7 @@ p {
     }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
     .list-down {
         width: 50%;
     }
@@ -535,6 +540,7 @@ p {
     .footer {
         text-align: center;
     }
+   
     .code {
         margin: auto;
     }
