@@ -236,8 +236,31 @@ li {
     font-size: 1.6rem;
     
 }
+.shadow {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    background-color: rgba(61,61,61,0.8)
+}
+.profession {
+    width: 6rem;
+    display: block;
+    line-height: 16rem;
+    margin: auto;
+    
+}
+.referral {
+    width: 80%;
+    margin: auto;
 
-
+}
+.table1:hover+div,.shadow:hover {
+    display: block;
+}
 
 
 
@@ -287,9 +310,9 @@ li {
 
 .font-style4 {
     display: inline-block;
-    margin-bottom: 3rem;
+    margin-bottom: 3.1rem;
     margin-right: 1rem;
-    border-bottom: solid #fff .15rem;
+    
 }
 
 .font-style5 {
@@ -306,12 +329,32 @@ li {
     margin: auto;
     background: url(../img/img2.png) no-repeat -1.4% 20.2%/274%;
 }
-
+.underline1:hover::after {
+    content: "";
+    display: inline-block;
+    width: 7rem;
+    height: .2rem;
+    margin-left: -7rem;
+    margin-bottom: -1rem;
+    background-color: #fff;
+}
+.underline:hover::after {
+    content: "";
+    display: inline-block;
+    width: 10.5rem;
+    height: .2rem;
+    margin-left: -10.5rem;
+    margin-bottom: -1rem;
+    background-color: #fff;
+}
 
 
 @media all and (max-width: 767px) {
     .footer {
         text-align: center;
+    }
+    .font-style5 {
+        margin-left: -3rem;
     }
    
     ul,
@@ -336,6 +379,19 @@ li {
     }
     .occupation {
         padding-left: 1.5rem;
+    }
+    .variety {
+        margin-left: 1.5rem;
+    }
+    .variety1 {
+        display: block;
+        line-height: 4rem;
+        text-align: center;
+        margin: 0;
+        border-top: solid #edf1f2 .1rem;
+    }
+    .shadow {
+        margin: 0 1.5rem;
     }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -372,6 +428,22 @@ li {
     .number5 {
         padding-left: 0;
     }
+    .shadow1 {
+        margin: 5rem 1.5rem 0 0;
+    }
+    .shadow2 {
+        margin: 5rem 0 0 1.5rem;
+    }
+    .shadow3 {
+        margin: 5rem 1.5rem 0 0;
+    }
+    .shadow4 {
+        margin: 5rem 0 0 1.5rem;
+    }
+    .shadow5 {
+        margin: 5rem 1.5rem 0 0;
+    }
+
 }
 @media all and (min-width: 1200px){
     .number1 {
@@ -388,6 +460,21 @@ li {
     }
     .number5 {
         padding: 0 .75rem;
+    }
+    .shadow1 {
+        margin: 5rem 1.5rem 0 0;
+    }
+    .shadow2 {
+        margin: 5rem .75rem 0;
+    }
+    .shadow3 {
+        margin: 5rem 0 0 1.5rem;
+    }
+    .shadow4 {
+        margin: 5rem 1.5rem 0 0;
+    }
+    .shadow5 {
+        margin: 5rem .75rem 0;
     }
 }
 

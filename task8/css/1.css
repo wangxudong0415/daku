@@ -498,9 +498,9 @@ p {
 
 .font-style4 {
     display: inline-block;
-    margin-bottom: 3rem;
+    margin-bottom: 3.1rem;
     margin-right: 1rem;
-    border-bottom: solid #fff .15rem;
+   
 }
 
 .font-style5 {
@@ -522,6 +522,24 @@ p {
     .list-span:hover::after {
         border-bottom: solid 0.15rem #26a26f;
     }
+    .underline1:hover::after {
+        content: "";
+        display: inline-block;
+        width: 7rem;
+        height: .2rem;
+        margin-left: -7rem;
+        margin-bottom: -1rem;
+        background-color: #fff;
+    }
+    .underline:hover::after {
+        content: "";
+        display: inline-block;
+        width: 10.5rem;
+        height: .2rem;
+        margin-left: -10.5rem;
+        margin-bottom: -1rem;
+        background-color: #fff;
+    }
 
 
 @media all and (max-width: 992px) and (min-width:768px) {
@@ -540,10 +558,11 @@ p {
     .footer {
         text-align: center;
     }
-   
-    .code {
-        margin: auto;
+    .font-style5 {
+        margin-left: -3rem;
     }
+   
+    
     .list-down::before {
         content: "";
         width: 0.5rem;
