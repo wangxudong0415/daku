@@ -10,15 +10,18 @@ li {
 }
 
 .header {
-    width: 100%;
-    height: 2rem;
-    background-color: #29bde0;
-    position: fixed;
-    color: #fff;
-    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: #29bde0;
+    
+    color: #fff;
+    
+    
 }
 
 .header>img {
@@ -27,47 +30,55 @@ li {
 }
 
 .font-style1 {
-    color: #fff;
+    
     font-size: 1.06rem;
     margin: 0;
+    color: #fff;
 }
 
 .fork {
+    position: relative;
     height: 1rem;
     width: 1rem;
-    position: relative;
+    
     margin-right: 1rem;
 }
 
-.fork1 {
-    width: 1rem;
-    height: 0.2rem;
+.fork::before {
+    content: "";
     position: absolute;
     top: 50%;
+    width: 1rem;
+    height: 0.2rem;
+    
     margin-top: -.1rem;
     transform: rotate(45deg);
     background-color: #fff;
 }
 
-.fork2 {
-    width: .2rem;
-    height: 1rem;
+.fork::after {
+    content: "";
     position: absolute;
     left: 50%;
+    width: .2rem;
+    height: 1rem;
+    
     margin-left: -.1rem;
     transform: rotate(45deg);
     background-color: #fff;
 }
 
 .music {
-    height: 2.5rem;
-    margin-top: 2rem;
-    background-color: #b9e9f5;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 2.5rem;
+    margin-top: 2rem;
+    
+    
     padding: 0 1rem;
     font-size: .8rem;
+    background-color: #b9e9f5;
 }
 
 .music>img {
@@ -76,14 +87,16 @@ li {
 }
 
 .backgroung {
-    background-color: #29bde0;
     height: 2.5rem;
+    background-color: #29bde0;
+    
 }
 
 .triangle {
-    margin-left: 1.5rem;
+    
     width: 0;
     height: 0;
+    margin-left: 1.5rem;
     border-left: .4rem solid transparent;
     border-right: .4rem solid transparent;
     border-top: .7rem solid #b9e9f5;
@@ -102,8 +115,9 @@ li {
 }
 
 .head {
-    float: left;
     width: 33.3%;
+    float: left;
+   
    
 
 }
@@ -112,25 +126,29 @@ li {
     height: 25vw;
     width: 25vw;
     margin: 4vw auto;
+    font-size: .9rem;
     background-color: #f5c97b;
     border: #fff solid .15rem;
-    font-size: .9rem;
+    
 }
 
 .name {
     display: flex;
     align-items: center;
-    margin: 0;
+    
     justify-content: center;
     height: 80%;
+    margin: 0;
 }
 
 .number {
-    margin: 0;
-    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 20%;
+    margin: 0;
+    
+    
     background-color: #83b09a;
     color: #fff;
 }
@@ -141,9 +159,10 @@ li {
 }
 
 .picture-style {
-    margin-top: 1.5vw;
+    
     width: 5vw;
     height: 5vw;
+    margin-top: 1.5vw;
 }
 
 .picture1 {
@@ -167,21 +186,24 @@ li {
     justify-content: space-between;
 }
 .footer {
-    width: 100%;
-    height: 4.5rem;
-    background-color: #29bde0;
-    position: fixed;
-    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 4.5rem;
+    background-color: #29bde0;
+    
+    
 }
 .footer>p {
     width: 15.5rem;
-    height: 2.5rem;
+    
+    line-height: 2.5rem;
     color: #fff;
     font-size: 1.25rem;
     background-color: #fbb435;
     text-align: center;
-    line-height: 2.5rem;
+   
 }

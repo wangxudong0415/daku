@@ -3,15 +3,18 @@ body {
 }
 
 .header {
-    width: 100%;
-    height: 2.5rem;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 2.5rem;
+    
     background-color: #29bde0;
     color: #fff;
     align-items: center;
-    position: fixed;
-    top: 0;
+    border-bottom: #74d4eb solid 0.06rem;
+    
 }
 
 .house {
@@ -24,18 +27,13 @@ body {
     margin-right: .6rem;
 }
 
-.lien {
-    position: fixed;
-    width: 100%;
-    height: 0.06rem;
-    top: 2.5rem;
-    background-color: #74d4eb;
-}
+
 
 .box {
     height: 19.5rem;
-    background-color: #29bde0;
+    
     margin-top: 2.5rem;
+    background-color: #29bde0;
 }
 
 .box1 {
@@ -43,15 +41,17 @@ body {
 }
 
 .victory {
-    margin-top: 1rem;
     width: 10.9rem;
+    margin-top: 1rem;
+    
 }
 
 .over {
-    color: #ffc865;
+    
     font-size: 1.03rem;
     padding: 0.5rem 2.7rem;
     margin: 0;
+    color: #ffc865;
 }
 
 .box2 {
@@ -68,9 +68,14 @@ body {
 
 .record {
     padding: .8rem 2.7rem;
+    border-bottom: solid #ddd .06rem;
 
 
 }
+.record1 {
+    margin-bottom: 4rem;
+}
+
 .first {
     display: flex;
     justify-content: space-between;
@@ -88,34 +93,35 @@ body {
     font-size: .875rem;
     color: #a6a6a6;
 }
-.lien1 {
-    height: .06rem;
-    background-color: #ddd;
-}
+
 .footer {
-    height: 4rem;
-    position: fixed;
-    bottom: 0;
-    background-color:rgba(153,223,240,0.5) ;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 100%;   
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    
+    background-color:rgba(153,223,240,0.5) ;
+    
+       
 }
 .option {
-    height: 2.68rem;
     width: 8.46rem;
+    height: 2.68rem;
+    line-height: 2.68rem;
     font-size: 1.25rem;
     margin: 0;
     text-align: center;
-    line-height: 2.68rem;
+    
     color: #fff;
     border-radius: 0.3rem;
    
 }
-.backgrung-color1 {
+.option1 {
     background-color: #f66f6f;
 }
-.backgrung-color2 {
+.option2 {
     background-color: #fbb435;
 }

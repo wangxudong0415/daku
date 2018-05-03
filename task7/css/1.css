@@ -4,38 +4,49 @@ body {
 }
 
 .header {
-    height: 2rem;
-    background-color: #29bde0;
     position: fixed;
     top: 0;
     width: 100%;
+    height: 2rem;
     line-height: 2rem;
+    background-color: #29bde0;
+    
+    
+    
 }
 
 .form {
-    margin-left: 1rem;
     width: 1rem;
+    margin-left: 1rem;
+    
 }
 
 .title {
     position: relative;
     height: 3.625rem;
+    line-height: 3.625rem;
+    margin: 3rem 5% 1rem;
+    font-size: 1.08rem;
     background-color: #fff;
     z-index: -1;
     color: #9a9a9a;
-    font-size: 1.08rem;
+    
     text-align: center;
-    line-height: 3.625rem;
-    margin: 3rem 5% 1rem;
+    
+    
 }
 
 .title img {
     position: absolute;
-    right: .5rem;
-    vertical-align: middle;
-    width: .75rem;
     top: 50%;
+    right: .5rem;
+    width: .75rem;
+    
     margin-top: -.625rem;
+    vertical-align: middle;
+    
+    
+    
 }
 
 .box {
@@ -47,42 +58,44 @@ body {
 .name {
     height: 2.8rem;
     line-height: 2.8rem;
-    color: #fbb435;
-    margin: 0;
+    
+    margin: 0 0 1.5rem;
     font-size: 1.18rem;
+    color: #fbb435;
+    border-bottom: #fbb435 solid 0.1rem;
 }
 
-.line {
-    margin-bottom: 1rem;
-    height: 0.06rem;
-    background-color: #fbb435;
-}
+
 
 .plate {
+    display: block;
     height: 4.18rem;
     margin: 0 10%;
+    line-height: 4.18rem;
     color: #fff;
     background-color: #69d1e9;
-    line-height: 4.18rem;
+    
 }
 
 .tag {
     height: 2.5rem;
-    color: #787878;
-    font-size: .76rem;
     line-height: 2.5rem;
+    font-size: .76rem;
+    
     margin: 0;
+    color: #787878;
 }
 
 .triangle {
     position: fixed;
+    right: 8%;
+    top: 19.5rem;
     width: 0;
     height: 0;
     border-left: .85rem solid #fbb435;
     border-bottom: .85rem solid transparent;
     border-top: .85rem solid transparent;
-    right: 8%;
-    top: 19.5rem;
+    
 }
 
 .paging {
