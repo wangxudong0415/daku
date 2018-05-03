@@ -542,7 +542,7 @@ p {
     }
 
 
-@media all and (max-width: 992px) and (min-width:768px) {
+@media all and (max-width: 991px) and (min-width:768px) {
     .list-down {
         width: 20%
     }
