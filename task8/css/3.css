@@ -244,7 +244,10 @@ li {
     left: 0;
     bottom: 0;
     color: #fff;
-    background-color: rgba(61,61,61,0.8)
+    background-color: #fff;
+    transition: background-color 2s linear ;
+	/* Safari */
+	-webkit-transition: background-color 2s linear ;
 }
 .profession {
     width: 6rem;
@@ -261,7 +264,9 @@ li {
 .table1:hover+div,.shadow:hover {
     display: block;
 }
-
+.shadow:hover {
+    background-color:  rgba(61,61,61,0.8);
+}
 
 
 
