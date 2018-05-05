@@ -5,6 +5,16 @@ body {
 p {
     margin: 0;
 }
+a{
+    color: #333;
+}
+a:hover {
+    text-decoration:none;
+    color: #fff;
+}  
+.a {
+    color: #fff;
+}
 
 ul,
 li {
@@ -398,6 +408,10 @@ li {
     .shadow {
         margin: 0 1.5rem;
     }
+    .font-style1 {
+        
+        margin-bottom: 2rem;
+    }
 }
 @media all and (min-width: 768px) and (max-width: 991px) {
     .number1 {
@@ -493,5 +507,5 @@ li {
     justify-content: center;
     color: #fff;
     background-color: #29b078;
-    line-height: 3rem;
+    line-height: 2rem;
 }
