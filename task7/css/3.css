@@ -20,6 +20,7 @@ li {
     background-color: #29bde0;
     
     color: #fff;
+    z-index: 1;
     
     
 }
@@ -112,6 +113,7 @@ li {
     position: absolute;
     background-color: #29bde0;
     padding-bottom: 5rem;
+    
 }
 
 .head {
