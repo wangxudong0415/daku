@@ -11,6 +11,9 @@ li {
   padding: 0;
   list-style: none;
 }
+.pointer {
+  cursor: pointer;
+}
 header {
   line-height: 2.75rem;
   background: #29bde0;
@@ -18,6 +21,7 @@ header {
 header img {
   width: 1.2rem;
   margin-left: 1rem;
+  cursor: pointer;
 }
 .title {
   position: relative;
@@ -39,14 +43,15 @@ header img {
   border-right: .15rem solid;
   border-top: .15rem solid;
   transform: rotate(45deg);
+  cursor: pointer;
 }
-div {
+.box {
   position: relative;
   margin: 0 5%;
   background: #fff;
   text-align: center;
 }
-div span:first-child {
+.box span:first-child {
   display: block;
   line-height: 2.8rem;
   margin: 0;
@@ -54,18 +59,19 @@ div span:first-child {
   background-color: #fff;
   border-bottom: solid 0.07rem #fbb435;
 }
-div span {
+.box span {
   display: block;
   line-height: 4rem;
   margin: 1rem 10%;
   color: #fff;
   background: #29bde0;
+  cursor: pointer;
 }
-div p {
+.box p {
   font-size: .75rem;
   color: #9a9a9a;
 }
-div::after {
+.box::after {
   content: "";
   position: fixed;
   top: 20.5rem;
@@ -73,17 +79,49 @@ div::after {
   border-left: .85rem solid #fbb435;
   border-bottom: .85rem solid transparent;
   border-top: .85rem solid transparent;
+  cursor: pointer;
 }
-div li:first-child {
+.box li:first-child {
   background-color: #29bde0;
 }
-div li {
+.box li {
   display: inline-block;
   width: .5rem;
   height: .5rem;
   border-radius: 50%;
   background-color: #f0f0f0;
+  cursor: pointer;
 }
-div li:hover {
+.box li:hover {
   background-color: #29bde0;
+}
+#menu {
+  display: none;
+}
+#menu:checked ~ .main {
+  transform: translateX(9rem);
+}
+.menu {
+  overflow: hidden;
+}
+.menu ul:nth-child(2) {
+  position: absolute;
+  width: 9rem;
+  height: 15rem;
+  background: #fff;
+  padding-top: 2.75rem;
+}
+.menu ul:nth-child(2) li {
+  text-align: center;
+  line-height: 2.5rem;
+  cursor: pointer;
+}
+.menu ul:nth-child(2) li:hover {
+  background: #29bde0;
+  color: #fff;
+}
+.menu .main {
+  position: relative;
+  background: #f0f0f0;
+  transition: all 0.25s;
 }
