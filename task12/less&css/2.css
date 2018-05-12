@@ -126,6 +126,12 @@ header .option span:last-child {
 .list p {
   font-size: .9rem;
 }
+.list p span:last-child {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .list li > span {
   padding-left: 1rem;
   margin-left: -1rem;

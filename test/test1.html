@@ -6,12 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!DOCTYPE html>
+    <style>
+      *{ 
+             margin: 0;
+             padding: 0; 
+             text-decoration: none;
+         }
+        ul{
+            list-style: none;
+        }
+        
+        #container{
+         
+            width: 100%;
+            
+            overflow: hidden;/*隐藏溢出的图片*/
+        }
+        .pic{
+            width:400%;/*4张图的宽度*/
+         
+           
+            clear: both;
+            animation-name: focusmap;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+
+        }
+         @keyframes focusmap {
+            0%{
+                left: 0;
+            }
+            33.3%{
+                margin-left: -100%;
+            }
+            66.6%{
+                margin-left: -200%;
+            }
+            100%{
+                margin-left: -300%;;
+            }
+           
+        }
+        .pic li{
+            float: left;
+
+            width: 25%;
+            font-size: 0;
+            
+           
+        }
+
+        .pic li img {
+            width: 100%;
+            max-height: 600px;
+            
+        }
+    </style>
+
 </head>
-    <body>
-    
-    
-    
-    </body>
-    
-    </html>
+
+<body>
+
+        <div id="container">
+                <ul class="pic">
+                    <li><img class="cursor-pointer" src="http://jns.img.bucket.ks3-cn-beijing.ksyun.com/skill/1/d4ddb42c-5e07-4d86-809f-e08898aa800d.jpg"></li>
+                    <li><img class="cursor-pointer" src="http://jns.img.bucket.ks3-cn-beijing.ksyun.com/skill/1/ee45d373-57f5-4662-a745-fe67d7d94b80.jpg" ></li>
+                    <li><img class="cursor-pointer" src="http://jns.img.bucket.ks3-cn-beijing.ksyun.com/skill/1/d4511b09-f892-49e0-b9d1-ed73a185ce2e.jpeg"></li>
+                    <li><img class="cursor-pointer" src="http://jns.img.bucket.ks3-cn-beijing.ksyun.com/skill/1/3a15425b-c947-4222-8558-0bf01cc36513.png" ></li>
+                </ul>
+                
+            </div>
+</body>
+
+</html>

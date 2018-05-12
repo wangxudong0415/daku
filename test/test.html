@@ -6,52 +6,57 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
-        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+       
 </head>
 
 <style>
-        .red {
-                background-color: red;
+        body {
+                margin: 0;
+                font-size: 350px;
         }
+  .a {
+          line-height: 500px;
+  }
+     .b {
+             display: inline-block;
+             line-height: 300px;
+             background: red; 
+     }
+      
+     .k {
+             height: 500px;
+             position: absolute;
+             top: 0;
+             left: 20px;
+             display: flex;
+             align-items: center;
 
-        .yellow {
-                background-color: rgb(7, 116, 101);
-        }
+     }
+     /* 调上面左右 */
 
-        .green {
-                background-color: green;
-        }
-
-        .gold {
-                background-color: gold;
-        }
-
-        .center {
-                text-align: center;
-                color: #fff;
-                font-size: 12rem;
-        }
-
-@media screen and (max-width:768px) {
-        .center {
-                text-align: left;
-        }
+.s {
+        width: 1000px;
+        height: 300px;
+      
+        display: flex;
+        align-items: center;
 }
-        
 </style>
 
 <body>
-               
-        <div class="center">
-                <p class="red hidden-xs">768以下</p>
-                <p class="red visible-xs">dfdf</p>
-                <p class="yellow visible-sm">768到992</p>
-                <p class="green visible-md">992到1200</p>
-                <p class="gold visible-lg">1200以上</p>
-        </div>
+         <div class="a">
+                 <div class="b">
+                         xxxxxx
+                 </div>
+         </div>     
+         <div class="k">
+           <div class="s">
+x 
+           </div>
 
-        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         </div> 
+      
+      
 
 </body>
 
