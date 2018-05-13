@@ -29,6 +29,12 @@ p {
   }
 }
 @media all and (max-width: 767px) {
+  .row {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media all and (max-width: 767px) {
   .hidden-xs {
     display: none;
   }
@@ -78,20 +84,75 @@ p {
     display: none;
   }
 }
-.flex-md-3 {
+.flex-md-4 {
   display: flex;
 }
 @media all and (max-width: 991px) {
-  .flex-md-3 {
+  .flex-md-4 {
     display: block;
   }
 }
-.flex-md-3 > div {
+.flex-md-4 > div {
   width: 25%;
 }
 @media all and (max-width: 991px) {
-  .flex-md-3 > div {
-    width: 100%;
+  .flex-md-4 > div {
+    width: auto;
+  }
+}
+.between-md-4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media all and (max-width: 991px) {
+  .between-md-4 {
+    display: block;
+  }
+}
+.between-md-4 > div {
+  width: 23%;
+}
+@media all and (max-width: 991px) {
+  .between-md-4 > div {
+    width: auto;
+  }
+}
+.between-md-5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media all and (max-width: 991px) {
+  .between-md-5 {
+    display: block;
+  }
+}
+.between-md-5 > div {
+  width: 19%;
+}
+@media all and (max-width: 991px) {
+  .between-md-5 > div {
+    width: auto;
+  }
+}
+.flex-md-3-2-1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-md-3-2-1 > div {
+  width: 32.3%;
+  margin-left: .5%;
+  margin-right: .5%;
+}
+@media all and (max-width: 991px) {
+  .flex-md-3-2-1 > div {
+    width: 48%;
+  }
+}
+@media all and (max-width: 767px) {
+  .flex-md-3-2-1 > div {
+    width: 99%;
   }
 }
 .flex {
@@ -133,6 +194,9 @@ p {
 }
 .center {
   text-align: center;
+}
+.box-shadow {
+  box-shadow: 0 0 0.18rem #888;
 }
 header {
   height: 2rem;
@@ -415,4 +479,139 @@ h3 {
 .people p {
   color: #999;
   line-height: 2rem;
+}
+.step {
+  position: relative;
+  margin-bottom: 3rem;
+  color: #999;
+}
+@media all and (max-width: 991px) {
+  .step {
+    text-align: center;
+  }
+}
+.step span:first-child {
+  float: left;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  color: #29b078;
+  box-shadow: 0 0 0.18rem #888;
+  border-radius: 50%;
+  text-align: center;
+}
+@media all and (max-width: 991px) {
+  .step span:first-child {
+    float: none;
+    display: block;
+    margin: 0 auto 1.5rem;
+  }
+}
+.step span:last-child {
+  line-height: 1.5rem;
+}
+.step-after::after {
+  content: "";
+  position: absolute;
+  top: .9rem;
+  right: -1.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url(../img/img66.png) 3% 16.7%/586%;
+}
+@media all and (max-width: 991px) {
+  .step-after::after {
+    display: none;
+  }
+}
+.card {
+  box-shadow: 0 0 0.18rem #888;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.card div {
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: auto;
+  background: url(../img/img66.png) -11% -9.5%/125%;
+}
+.card span {
+  display: block;
+  margin: 1.5rem 0 ;
+  text-align: center;
+  font-weight: bold;
+}
+.card p {
+  margin-left: .3rem;
+  color: #999;
+}
+.circle {
+  text-align: center;
+}
+.circle span:first-child {
+  background: #29b078;
+}
+.circle span {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  box-shadow: 0 0 0.18rem #888;
+  border-radius: 50%;
+}
+.circle span:hover {
+  background: #29b078;
+}
+.log {
+  height: 10rem;
+  margin-bottom: 2rem;
+  background: url(../img/tt.png) 50% 44% /133%;
+}
+@media all and (max-width: 991px) {
+  .log {
+    width: 15rem !important;
+    margin: 0 auto 2rem;
+    background: url(../img/log111.png) 50% 44% /80% no-repeat;
+  }
+}
+.log:hover {
+  box-shadow: 0 0 0.18rem #888;
+}
+.link {
+  margin-bottom: 1rem;
+}
+@media all and (max-width: 991px) {
+  .link {
+    display: inline-block;
+    width: 48%;
+  }
+}
+.link li {
+  display: inline-block;
+  width: 9.5%;
+}
+@media all and (max-width: 991px) {
+  .link li {
+    display: block;
+    width: auto;
+    margin: 1rem 0;
+    text-align: center;
+  }
+}
+.link li span {
+  position: relative;
+  padding-left: .8rem;
+  box-sizing: border-box;
+}
+.link li span::before {
+  content: "";
+  position: absolute;
+  top: .5rem;
+  left: 0;
+  width: .3rem;
+  height: .3rem;
+  border-radius: 50%;
+  background: #999;
+}
+.link li span:hover {
+  border-bottom: solid #29b078 0.07rem;
 }

@@ -29,6 +29,12 @@ p {
   }
 }
 @media all and (max-width: 767px) {
+  .row {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media all and (max-width: 767px) {
   .hidden-xs {
     display: none;
   }
@@ -78,6 +84,77 @@ p {
     display: none;
   }
 }
+.flex-md-4 {
+  display: flex;
+}
+@media all and (max-width: 991px) {
+  .flex-md-4 {
+    display: block;
+  }
+}
+.flex-md-4 > div {
+  width: 25%;
+}
+@media all and (max-width: 991px) {
+  .flex-md-4 > div {
+    width: auto;
+  }
+}
+.between-md-4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media all and (max-width: 991px) {
+  .between-md-4 {
+    display: block;
+  }
+}
+.between-md-4 > div {
+  width: 23%;
+}
+@media all and (max-width: 991px) {
+  .between-md-4 > div {
+    width: auto;
+  }
+}
+.between-md-5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media all and (max-width: 991px) {
+  .between-md-5 {
+    display: block;
+  }
+}
+.between-md-5 > div {
+  width: 19%;
+}
+@media all and (max-width: 991px) {
+  .between-md-5 > div {
+    width: auto;
+  }
+}
+.flex-md-3-2-1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-md-3-2-1 > div {
+  width: 32.3%;
+  margin-left: .5%;
+  margin-right: .5%;
+}
+@media all and (max-width: 991px) {
+  .flex-md-3-2-1 > div {
+    width: 48%;
+  }
+}
+@media all and (max-width: 767px) {
+  .flex-md-3-2-1 > div {
+    width: 99%;
+  }
+}
 .flex {
   display: flex;
 }
@@ -100,11 +177,26 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.width {
+  width: 100%;
+}
+.auto {
+  margin: auto;
+}
 .middle {
   vertical-align: middle;
 }
 .center {
   text-align: center;
+}
+.box-shadow {
+  box-shadow: 0 0 0.18rem #888;
 }
 header {
   height: 2rem;
@@ -300,4 +392,156 @@ footer .row div {
 }
 .site span {
   word-break: keep-all;
+}
+h4 {
+  line-height: 4rem;
+  margin: 0;
+  border-bottom: solid 0.07rem #999;
+}
+.border-left {
+  border-left: 0.07rem #999 solid;
+}
+.border-bottom {
+  border-bottom: solid 0.07rem #999;
+}
+.kind {
+  line-height: 4rem;
+  color: #29b078;
+}
+.list {
+  line-height: 3rem;
+  border-bottom: solid 0.07rem #999;
+}
+@media all and (max-width: 767px) {
+  .list {
+    border: 0;
+  }
+}
+.list span:first-child {
+  color: #999;
+  margin: 0;
+}
+@media all and (max-width: 767px) {
+  .list span:first-child {
+    text-align: left;
+  }
+}
+.list span:first-child:hover {
+  color: #999;
+  background: #fff;
+}
+.list span {
+  margin-left: 2rem;
+}
+@media all and (max-width: 767px) {
+  .list span {
+    display: block;
+    border-bottom: solid 0.07rem #999;
+    margin: 0;
+    text-align: center;
+  }
+}
+.list span:hover {
+  color: #fff;
+  background: #29b078;
+}
+.card {
+  position: relative;
+  margin: 3rem 0;
+}
+.card table {
+  width: 100%;
+  border: #ccc;
+  border-collapse: collapse;
+  box-shadow: 0 0 0.18rem #888;
+}
+.card table tr {
+  line-height: 1.4rem;
+  font-size: 0.8rem;
+}
+.card table td {
+  padding: .3rem;
+}
+.card table h5 {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+.card table h5 + p {
+  line-height: 1.05rem;
+}
+.card table img {
+  float: left;
+  margin-right: .5rem;
+}
+.card table tr:nth-child(2) {
+  color: #999;
+  font-size: 0;
+}
+.card table tr:nth-child(2) td:last-child {
+  width: 50%;
+}
+.card table tr:nth-child(2) span {
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+.card table tr:nth-child(2) .star {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-left: .5rem;
+  background: url(../img/img66.png) 50% 8.57%/792%;
+  vertical-align: middle;
+}
+.card table tr:nth-child(3) {
+  color: #999;
+}
+.card table tr:nth-child(3) span:nth-child(2) {
+  color: red;
+}
+.card table tr:nth-child(3) span:nth-child(3) {
+  color: #333;
+}
+.card table .treatment td:first-child {
+  width: 35%;
+  color: #999;
+  border-bottom: 0;
+  border-top: 0;
+  text-align: center;
+}
+.card table .treatment span:last-child {
+  float: right;
+}
+.card table tr:nth-last-child(2) {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.card table tr:nth-last-child(2) span:nth-child(2) {
+  color: red;
+}
+.card table tr:last-child {
+  color: #999;
+}
+.card .shadow {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  transition: background-color 0.5s linear;
+}
+.card .shadow h4 {
+  text-align: center;
+}
+.card .shadow p {
+  width: 70%;
+  margin: auto;
+}
+.card table:hover ~ .shadow,
+.card .shadow:hover {
+  display: block;
+}
+.card .shadow:hover {
+  background-color: rgba(61, 61, 61, 0.8);
 }

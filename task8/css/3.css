@@ -257,8 +257,7 @@ li {
     color: #fff;
     background-color: #fff;
     transition: background-color 2s linear ;
-	/* Safari */
-	-webkit-transition: background-color 2s linear ;
+	
 }
 .profession {
     width: 6rem;
