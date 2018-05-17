@@ -7,6 +7,9 @@ li {
   padding: 0;
   list-style: none;
 }
+a {
+  text-decoration: none;
+}
 p {
   margin: 0;
 }
@@ -236,17 +239,17 @@ header > div .n {
   background: #29b078;
   line-height: 4.5rem;
 }
-.down-menu > div > div > img {
+.down-menu > div > div > a > img {
   width: 40%;
   vertical-align: middle;
 }
 @media all and (max-width: 767px) {
-  .down-menu > div > div > img {
+  .down-menu > div > div > a > img {
     width: 14rem;
   }
 }
 @media all and (min-width: 992px) {
-  .down-menu > div > div > img {
+  .down-menu > div > div > a > img {
     width: 25%;
   }
 }
@@ -278,7 +281,7 @@ header > div .n {
     float: none;
   }
 }
-.down-menu ul li:last-child {
+.down-menu ul .last-li {
   margin-right: 0;
 }
 .down-menu ul li {

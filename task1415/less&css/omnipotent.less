@@ -8,7 +8,9 @@ li {
     padding: 0;
     list-style: none;
 }
-
+a {
+    text-decoration:none;
+}
 p {
     margin: 0;
 }
@@ -313,7 +315,7 @@ header {
 .down-menu {
     background: @green;
     line-height: 4.5rem;
-    &>div>div>img {
+    &>div>div>a>img {
         width: 40%;
         .middle;
         @media all and (max-width: 767px) {
@@ -348,7 +350,7 @@ header {
             display: none;
             float: none;
         }
-        li:last-child {
+        .last-li {
             margin-right: 0;
         }
         li {
