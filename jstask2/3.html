@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/2.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/Back.png" alt="">
+    </header>
+    <p>玩家匹比</p>
+    <div>
+        <div>
+            <img src="img/mn.jpg" alt="">
+            <span>幽灵
+                <span id="bad">2</span>人</span>
+        </div>
+        <div>
+            <img src="img/bkhjb.png" alt="">
+            <span>水民
+                <span id="good">6</span>人</span>
+        </div>
+
+    </div>
+    <ul>
+        <li>
+            <span>水民词组：</span>
+            <input type="text" maxlength="10" placeholder="限输入10个字以内">
+        </li>
+        <li>
+            <span>幽灵词组：</span>
+            <input type="text" maxlength="10" placeholder="限输入10个字以内">
+        </li>
+    </ul>
+    <div>
+        <span>请输入玩家数量</span>
+        <input type="text" id="dome" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this),y()" onblur="this.v();"
+            maxlength="2" >
+        <span>玩家数量为4-18</span>
+
+
+    </div>
+    <button onclick="qqq()">去发牌</button>
+    <div id="pop-up">
+        <div>
+            <span>请输入正确玩家数量</span>
+            <button onclick="x()">取消</button>
+          
+            <button onclick="x()">确认</button>
+        </div>
+    </div>
+
+    <script>
+        var bad = document.getElementById('bad'); //坏人节点
+        var good = document.getElementById('good'); //好人节点
+        var pop = document.getElementById('pop-up'); //投票节点
+        var arr = [];
+        var input = document.getElementById('dome');
+
+        //弹出框消失
+        function x() {
+            pop.style.display = 'none';
+        }
+
+        //捕捉input值检测
+
+
+        function y() {
+            
+            var a=input.value;
+
+            if (a < 6 && a > 3) {
+                arr[0] = 1;
+                
+
+            } else if (a > 5 && a < 9) {
+                arr[0] = 2;
+                
+
+            } else if (a > 8 && a < 12) {
+                arr[0] = 3;
+                
+
+            } else if (a > 11 && a < 15) {
+                arr[0] = 4;
+                
+
+            } else if (a > 14 && a < 18) {
+                arr[0] = 5;
+                
+
+            } else if (a == 18) {
+                arr[0] = 6;
+                
+
+            } else {
+                
+                
+                bad.innerText = 0;
+                good.innerText = 0;
+                return
+                
+            }
+            arr[1] = a - arr[0];
+            bad.innerText = arr[0];
+            good.innerText = arr[1];
+            
+        }
+        
+
+
+
+
+
+
+        function qqq() {
+            var a=input.value;
+           if (a<4) {
+            pop.style.display = 'block';
+           }
+           else if (a>18) {
+            pop.style.display = 'block';
+           }
+        }
+         
+     
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
