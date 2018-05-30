@@ -20,46 +20,76 @@
         <img id="good" src="img/bkhjb.png" alt="">
         <img id="bad" src="img/bad.png" alt="">
         <span id="id">平民</span>
-        <img src="img/ass.png" alt="">
+        <img id="play" src="img/ass.png" alt="">
     </div>
-    <button id="look" >
-        sdfdf
+    <button id="look">
+        查看身份
     </button>
     <button id="transmit">
-        dfdfdf
+        下一个
     </button>
 
 
 
 
 
-<script>
+    <script>
+        var data2 = JSON.parse(localStorage.getItem('identity'));
+        var data1 = (localStorage.getItem('sum'));
+        var next = document.getElementById('transmit');
+        var look = document.getElementById('look');
+        var serial = document.getElementById('number');
+        var play = document.getElementById('play');
+        var good = document.getElementById('good');
+        var bad = document.getElementById('bad');
+        var id = document.getElementById('id');
+        var num = 2;
+        var as = 0;
+        console.log(data2);
+        console.log(data1);
+
+        next.onclick = function aa() {
+            look.style.display = 'block';
+            next.style.display = 'none';
+            good.style.display = 'none';
+            bad.style.display = 'none';
+            id.style.display = 'none';
+            play.style.display = 'block';
+            serial.innerHTML = num;
+            num += 1;
+            if (num - 1 == data1) {
+                next.innerText = '法官查看';
+
+            }
+            if (num - 2 == data1) {
+                window.location.href = '5.html';
+            }
 
 
-var data2 = JSON.parse(localStorage.getItem('identity'));
-var data1 = (localStorage.getItem('sum'));
-var but = document.getElementById('look');
-
-
-       var serial = document.getElementById('number');
-        var num=2;
- but.onclick= function aa() {
-     
-       serial.innerHTML=num;
-        num += 1;
-
-      
-}
+        }
+        look.onclick = function bb() {
+            look.style.display = 'none';
+            next.style.display = 'block';
+            play.style.display = 'none';
 
 
 
+            if (data2[as] == '好人') {
+                good.style.display = 'block';
+                bad.style.display = 'none';
+                id.style.display = 'inline';
+                id.innerText = '平民';
 
+            } else {
+                bad.style.display = 'block';
+                good.style.display = 'none';
+                id.style.display = 'inline';
+                id.innerText = '狼人';
 
-
-
-
-
-</script>
+            }
+            as += 1;
+        }
+    </script>
 
 
 </body>

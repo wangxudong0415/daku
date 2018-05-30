@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/4.css">
+</head>
+
+<body>
+        
+    <header>
+        <img src="img/map.png">
+        <span>投票</span>
+        <div></div>
+
+    </header>
+    <div class="radio">
+        <span>发言讨论结束，大家请投票</span>
+        <img src="img/play.png">
+    </div>
+    <p>点击投票数最多人的头像</p>
+    <div class="overall">
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>1号</span>
+                <ul>
+                    
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>2号</span>
+                <ul>
+                    
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>3号</span>
+                <ul>
+                    
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>4号</span>
+                <ul>
+                    
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>5号</span>
+                <ul>
+                   
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>6号</span>
+                <ul>
+                   
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>7号</span>
+                <ul>
+                    
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>8号</span>
+                <ul>
+                  
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>9号</span>
+                <ul>
+                    
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>10号</span>
+                <ul>
+                   
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>11号</span>
+                <ul>
+                  
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>12号</span>
+                <ul>
+                 
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>13号</span>
+                <ul>
+                 
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>14号</span>
+                <ul>
+                 
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>15号</span>
+                <ul>
+                 
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <span class="id"></span>
+                <span>16号</span>
+                <ul>
+                 
+                    <li class="option4"></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <span>投死</span>
+    </footer>
+
+
+    <script>
+    
+    var data2 = JSON.parse(localStorage.getItem('identity'));
+    var data1 = (localStorage.getItem('sum'));
+    var box = document.getElementsByClassName('box');
+    var id = document.getElementsByClassName('id');
+    
+    function y() {
+
+        for (i=0;i<data1;i++){
+            box[i].style.display = 'block';
+            if (data2[i] == '好人') {
+                id[i].innerText = '平民';
+
+            }
+            else {
+                id[i].innerText = '狼人';
+            }
+
+        }
+    }
+    y();
+
+    
+    
+    
+    
+    
+    </script>
+
+
+
+
+
+</body>
+
+</html>

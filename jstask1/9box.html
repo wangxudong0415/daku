@@ -88,14 +88,21 @@
             }
         }
 
-
-       // 点击运行  并且1s 一直循环
-        function begin() {
-            clearInterval(time);
-            time = setInterval(function y() {
+        function all() {             //封装函数
                 back();
                 number();
                 give();
+        }
+    
+
+       // 点击运行  并且1s 一直循环
+        function begin() {
+           clearInterval(time);
+               all()
+
+            time = setInterval(function y() { 
+                all()
+              
             }, 1000);
         }
 
