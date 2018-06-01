@@ -5,142 +5,123 @@ body {
 p {
   margin: 0;
 }
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  line-height: 2.75rem;
-  font-size: 0;
-  background: #29bde0;
-}
-header img {
-  width: .8rem;
-  margin-left: .5rem;
-  vertical-align: middle;
-}
-header + p {
-  line-height: 2rem;
-  margin: 3rem 2% .25rem;
-  text-align: center;
-  background: #fff;
-}
-p + div {
-  display: flex;
-  height: 10rem;
-  margin: 0 2%;
-  background: #fff;
-}
-p + div img {
-  width: 2rem;
-  height: 2rem;
-  margin-left: 4%;
-  border-radius: 50%;
-  vertical-align: middle;
-}
-p + div span {
-  font-size: .8rem;
-  vertical-align: middle;
-}
-p + div span span {
-  vertical-align: initial;
-}
-p + div > div {
-  width: 50%;
-}
 ul,
 li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-ul {
-  margin: .25rem 2%;
-  padding: .5rem 1rem;
+.pointer {
+  cursor: pointer;
+}
+header {
+  line-height: 2.75rem;
+  background: #29bde0;
+}
+header img {
+  width: 1.2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.title {
+  position: relative;
+  display: block;
+  line-height: 3.7rem;
+  margin: 1rem 5%;
+  text-align: center;
+  color: #9a9a9a;
   background: #fff;
 }
-ul li {
-  display: flex;
-  color: #ccc;
-  line-height: 3rem;
-  border-bottom: solid #ccc .07rem;
+.title::after {
+  content: "";
+  position: absolute;
+  top: 1.43rem;
+  right: .6rem;
+  width: .7rem;
+  height: .7rem;
+  color: #e7e7e7;
+  border-right: .15rem solid;
+  border-top: .15rem solid;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.box {
+  position: relative;
+  margin: 0 5%;
+  background: #fff;
+  text-align: center;
+}
+.box span:first-child {
+  display: block;
+  line-height: 2.8rem;
+  margin: 0;
+  color: #fbb435;
+  background-color: #fff;
+  border-bottom: solid 0.07rem #fbb435;
+}
+.box span {
+  display: block;
+  line-height: 4rem;
+  margin: 1rem 10%;
+  color: #fff;
+  background: #29bde0;
+  cursor: pointer;
+}
+.box p {
+  font-size: .75rem;
+  color: #9a9a9a;
+}
+.box::after {
+  content: "";
+  position: fixed;
+  top: 20.5rem;
+  right: 7%;
+  border-left: .85rem solid #fbb435;
+  border-bottom: .85rem solid transparent;
+  border-top: .85rem solid transparent;
+  cursor: pointer;
+}
+.box li:first-child {
+  background-color: #29bde0;
+}
+.box li {
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.box li:hover {
+  background-color: #29bde0;
+}
+#menu {
+  display: none;
+}
+#menu:checked ~ .main {
+  transform: translateX(9rem);
+}
+.menu {
   overflow: hidden;
 }
-ul li span {
-  word-break: keep-all;
-}
-ul li input {
-  width: 100%;
-  color: orange;
-  outline: none;
-  border: none;
-}
-ul + div {
-  margin: 0 2%;
-  padding: 1rem 0;
-  background: #fff;
-  text-align: center;
-}
-ul + div input {
-  width: 2rem;
-  height: 1.5rem;
-  border-radius: .15rem;
-  outline: none;
-  border: none;
-  color: green;
-  background: #ccc;
-  margin: 0 .5rem;
-  text-align: center;
-}
-ul + div span {
-  vertical-align: middle;
-}
-ul + div span:first-child {
-  font-size: 1rem;
-}
-ul + div span:last-child {
-  font-size: .8rem;
-  color: orange;
-}
-div + button {
-  width: 96%;
-  height: 3rem;
-  margin-left: 2%;
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  background: orange;
-  border: none;
-  outline: none;
-}
-button + div {
-  display: none;
+.menu ul:nth-child(2) {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(61, 61, 61, 0.8);
-}
-button + div div {
-  width: 70%;
-  margin: 10rem auto;
+  width: 9rem;
+  height: 15rem;
   background: #fff;
-  border-radius: .15rem;
+  padding-top: 2.75rem;
 }
-button + div div span {
-  display: block;
-  padding: 4rem 0 0 2rem;
+.menu ul:nth-child(2) li {
+  text-align: center;
+  line-height: 2.5rem;
+  cursor: pointer;
 }
-button + div div button {
-  float: left;
-  width: 50%;
-  padding-top: 1rem;
-  outline: none;
-  border: none;
-  border-top: solid #ccc .07rem;
-  height: 4rem;
-  background: #fff;
-  box-sizing: border-box;
+.menu ul:nth-child(2) li:hover {
+  background: #29bde0;
+  color: #fff;
 }
-button + div div button:nth-child(2) {
-  border-right: solid .07rem #ccc;
+.menu .main {
+  position: relative;
+  background: #f0f0f0;
+  transition: all 0.25s;
 }

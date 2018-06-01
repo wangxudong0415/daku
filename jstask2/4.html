@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/3.css">
+    <link rel="stylesheet" href="css/4.css">
 </head>
 
 <body>
@@ -26,72 +26,13 @@
         查看身份
     </button>
     <button id="transmit">
-        下一个
+        隐藏并传递给<span id="number1">2</span>号
     </button>
 
 
+   
 
-
-
-    <script>
-        var data2 = JSON.parse(localStorage.getItem('identity'));
-        var data1 = (localStorage.getItem('sum'));
-        var next = document.getElementById('transmit');
-        var look = document.getElementById('look');
-        var serial = document.getElementById('number');
-        var play = document.getElementById('play');
-        var good = document.getElementById('good');
-        var bad = document.getElementById('bad');
-        var id = document.getElementById('id');
-        var num = 2;
-        var as = 0;
-        console.log(data2);
-        console.log(data1);
-
-        next.onclick = function aa() {
-            look.style.display = 'block';
-            next.style.display = 'none';
-            good.style.display = 'none';
-            bad.style.display = 'none';
-            id.style.display = 'none';
-            play.style.display = 'block';
-            serial.innerHTML = num;
-            num += 1;
-            if (num - 1 == data1) {
-                next.innerText = '法官查看';
-
-            }
-            if (num - 2 == data1) {
-                window.location.href = '5.html';
-            }
-
-
-        }
-        look.onclick = function bb() {
-            look.style.display = 'none';
-            next.style.display = 'block';
-            play.style.display = 'none';
-
-
-
-            if (data2[as] == '好人') {
-                good.style.display = 'block';
-                bad.style.display = 'none';
-                id.style.display = 'inline';
-                id.innerText = '平民';
-
-            } else {
-                bad.style.display = 'block';
-                good.style.display = 'none';
-                id.style.display = 'inline';
-                id.innerText = '狼人';
-
-            }
-            as += 1;
-        }
-    </script>
-
-
+<script type="text/javascript" src="js/4.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/2.css">
+    <link rel="stylesheet" href="css/3.css">
 </head>
 
 <body>
@@ -39,131 +39,22 @@
     </ul>
     <div>
         <span>请输入玩家数量</span>
-        <input type="text" id="dome" onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this),tyu()"
-            onblur="this.v();" maxlength="2" value="8">
+        <input type="text" id="dome"  maxlength="2" value="8">
         <span>玩家数量为4-18</span>
 
 
     </div>
-    <button onclick="qqq()">去发牌</button>
+    <button onclick="deal()">去发牌</button>
     <div id="pop-up">
         <div>
             <span>请输入正确玩家数量</span>
-            <button onclick="x()">取消</button>
+            <button onclick="cancel()">取消</button>
 
-            <button onclick="x()">确认</button>
+            <button onclick="cancel()">确认</button>
         </div>
     </div>
 
-    <script>
-        var bad = document.getElementById('bad'); //坏人节点
-        var good = document.getElementById('good'); //好人节点
-        var pop = document.getElementById('pop-up'); //投票节点
-        var arr = [];
-        var well = [];
-        
-
-        //弹出框消失
-        function x() {
-            pop.style.display = 'none';
-        }
-
-        tyu();
-
-
-      
-
-
-
-
-
-
-
-
-        function qqq() {
-            var a = document.getElementById('dome').value;
-            if (a < 4) {
-                pop.style.display = 'block';
-            } else if (a > 18) {
-                pop.style.display = 'block';
-            }
-             else if (a>3 && a<19){
-                  window.location.href='4.html';
-             }
-        }
-
-        //捕捉input值检测
-
-        function tyu() {
-            
-            var a = document.getElementById('dome').value;
-            window.localStorage.setItem('sum',document.getElementById('dome').value);
-            var b = [];
-            if (a < 6 && a > 3) {
-                arr[0] = 1;
-
-
-
-            } else if (a > 5 && a < 9) {
-                arr[0] = 2;
-
-
-            } else if (a > 8 && a < 12) {
-                arr[0] = 3;
-
-
-            } else if (a > 11 && a < 16) {
-                arr[0] = 4;
-
-
-            } else if (a > 15 && a < 19) {
-                arr[0] = 5;
-
-
-            } 
-
-
-            else {
-
-
-                bad.innerText = 0;
-                good.innerText = 0;
-                return
-
-            }
-            arr[1] = a - arr[0];
-            bad.innerText = arr[0];
-            good.innerText = arr[1];
-            for (let i = 0; i < arr[0]; i++) {
-                b.push('狼人')
-
-            }
-            for (let i = 0; i < arr[1]; i++) {
-                b.push('好人')
-            }
-
-            
-                var len = b.length;
-                for (var i = 0; i < len - 1; i++) {
-                    var idx = Math.floor(Math.random() * (len - i));
-                    var temp = b[idx];
-                    b[idx] = b[len - i - 1];
-                    b[len - i - 1] = temp;
-                }
-                
-           
-                
-              window.localStorage.setItem('identity',JSON.stringify(b));
-             
-        }
-    </script>
-
-
-
-
-
-
-
+    <script type="text/javascript" src="js/3.js"></script>
 
 
 
