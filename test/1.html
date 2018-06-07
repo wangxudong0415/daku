@@ -7,9 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-   body {
-       background: #ccc;
-   }
+   
     
     </style>
 </head>
@@ -18,14 +16,32 @@
   
 
 
-    <!-- <script>
-        function j() {
-            window.location.href = 'http://www.baidu.com/';
-        }
+ <script>
+ 
+ function changeAgeAndReference(person) {
+            person.age = 25;
+            person = {
+                name: 'John',
+                age: 50
+            };
 
-        var p1 = document.getElementById('qq');
-        p1.innerText = 'aaa';
-    </script> -->
+            return person;
+        }
+        var personObj1 = {
+            name: 'Alex',
+            age: 30
+        };
+        var personObj2 = changeAgeAndReference(personObj1);
+        console.log(personObj1); // -> ?
+        console.log(personObj2); // -> ?
+
+
+
+
+
+ </script>
+
+ 
 </body>
 
 </html>

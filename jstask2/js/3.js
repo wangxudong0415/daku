@@ -72,5 +72,5 @@ var bad = document.getElementById('bad'); //坏人节点
             }
             console.log(b);
             window.localStorage.setItem('identity', JSON.stringify(b));   //转换格式 保存数据
-
+            
         }

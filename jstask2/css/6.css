@@ -75,8 +75,7 @@ header div::after {
   border-radius: 50% / 0 0 100% 100% ;
 }
 .list .matter p {
-  height: 1.5rem;
-  line-height: 1.5rem;
+  line-height: 2.5rem;
   text-align: left;
   font-size: .8rem;
 }
@@ -90,7 +89,7 @@ header div::after {
   border: solid .07rem #ccc;
   background: url(../img/img.png) 16% 90% /131% no-repeat;
 }
-.list .matter .button {
+.list .matter span {
   position: relative;
   display: block;
   line-height: 2rem;
@@ -99,8 +98,10 @@ header div::after {
   color: #fff;
   background: #24a7c6;
 }
-.list .matter .button::before {
-  content: "";
+.list .matter span .trianglea,
+.list .matter span .triangleb,
+.list .matter span .trianglec,
+.list .matter span .triangled {
   position: absolute;
   top: .5rem;
   left: -2.2rem;
@@ -114,7 +115,7 @@ header div::after {
 .list .matter .sun {
   position: absolute;
   left: -1.1rem;
-  top: 5.2rem;
+  top: 3.9rem;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;

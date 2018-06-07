@@ -11,9 +11,10 @@ var id = document.getElementById('id');                          //文字身份
 var num = 1;                                                     //建立一个值 用来每次点击加1
 var a = 0;                                                       //建立一个值 用来每次点击加1
 // console.log(gain);
-// console.log(data);
+console.log(num);
 
 next.onclick = function paga() {                                 //翻页按钮函数
+    
     look.style.display = 'block';
     next.style.display = 'none';
     good.style.display = 'none';
@@ -31,7 +32,7 @@ next.onclick = function paga() {                                 //翻页按钮�
     if (num - 1 == data) {                                         //最后一个按钮实现跳转
         window.location.href = '5.html';
     }
-
+console.log(num);
 
 }
 look.onclick = function check() {                                  //查看按钮 函数
