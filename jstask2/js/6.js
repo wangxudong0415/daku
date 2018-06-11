@@ -38,7 +38,7 @@ function create() {
     day.innerText = '第' + num[m] + '天';
     m += 1;
     for (let i = 0; i < m; i++) {
-        
+
         daies[i].onclick = function hie() {
             if (window, getComputedStyle(matters[i], null).display == 'block') {
                 matters[i].style.display = 'none';
@@ -153,11 +153,23 @@ function run() {
                     sun.style.top = '6.4rem';
                     kill.style.backgroundColor = '#ccc';
                     trianglea.style.borderRight = '.7rem solid #ccc';
+                    return
 
+                } else {
+                    killResult.innerHTML = '杀手没有杀人'
                 }
+
+
+
+                window.sessionStorage.setItem('onedayvote', JSON.stringify(oneday));
+                sun.style.top = '6.4rem';
+                kill.style.backgroundColor = '#ccc';
+                trianglea.style.borderRight = '.7rem solid #ccc';
+
             }
         }
     }
+    
 
     function votegenerate() {
         var twoday = JSON.parse(sessionStorage.getItem('onedayvotekill'));
@@ -195,61 +207,69 @@ function run() {
         }
         console.log(twodayif)
         window.sessionStorage.setItem('twoday', JSON.stringify(twodayif));
-        if (arr.length == 2) {
-            n += 1;
-            create();
-            all();
-            var kill = document.getElementsByClassName('kill')[n]; //杀人按钮节点
-            var matter = document.getElementsByClassName('matter')[n]; //列表节点
-            var killResult = document.getElementsByClassName('killResult')[n]; //杀人结果声明节点
-            var sun = document.getElementsByClassName('sun')[n]; //太阳图节点  
-            var ghost = document.getElementsByClassName('ghost')[n]; //亡灵遗言按钮节点
-            var player = document.getElementsByClassName('player')[n]; //玩家发言按钮节点
-            var vote = document.getElementsByClassName('vote')[n]; //投票按钮节点
-            var voteResult = document.getElementsByClassName('voteResult')[n]; //投票结果声明
-            var trianglea = document.getElementsByClassName('trianglea')[n]; //4个三角形节点
-            var triangleb = document.getElementsByClassName('triangleb')[n];
-            var trianglec = document.getElementsByClassName('trianglec')[n];
-            var triangled = document.getElementsByClassName('triangled')[n];
 
-            function votegenerate() {
-                var threeday = JSON.parse(sessionStorage.getItem('twodayvotekill'));
-                if (threeday == null) {
-                    return
-                } else {
-                    for (let i = 0; i < threeday.length; i++) {
-                        if (threeday[i].state == 'die') {
-                            voteResult.innerHTML = threeday[i].id + '号玩家被票出,真是身份吗是' + threeday[i].name;
-                            ghost.style.backgroundColor = '#ccc';
-                            triangleb.style.borderRight = '.7rem solid #ccc';
-                            player.style.backgroundColor = '#ccc';
-                            trianglec.style.borderRight = '.7rem solid #ccc';
-                            vote.style.backgroundColor = '#ccc';
-                            triangled.style.borderRight = '.7rem solid #ccc';
-                        }
-                    }
-                }
-            }
+        n += 1;
+        create();
+        all();
+        var kill = document.getElementsByClassName('kill')[n]; //杀人按钮节点
+        var matter = document.getElementsByClassName('matter')[n]; //列表节点
+        var killResult = document.getElementsByClassName('killResult')[n]; //杀人结果声明节点
+        var sun = document.getElementsByClassName('sun')[n]; //太阳图节点  
+        var ghost = document.getElementsByClassName('ghost')[n]; //亡灵遗言按钮节点
+        var player = document.getElementsByClassName('player')[n]; //玩家发言按钮节点
+        var vote = document.getElementsByClassName('vote')[n]; //投票按钮节点
+        var voteResult = document.getElementsByClassName('voteResult')[n]; //投票结果声明
+        var trianglea = document.getElementsByClassName('trianglea')[n]; //4个三角形节点
+        var triangleb = document.getElementsByClassName('triangleb')[n];
+        var trianglec = document.getElementsByClassName('trianglec')[n];
+        var triangled = document.getElementsByClassName('triangled')[n];
 
-            function generate() {
-                var twoday = JSON.parse(sessionStorage.getItem('twodaykill'));
-                if (twoday == null) {
-                    return
-                } else {
-                    for (let i = 0; i < twoday.length; i++) {
-                        if (twoday[i].state == 'die') {
-                            killResult.innerHTML = twoday[i].id + '号玩家被杀死，真实身份是好人';
-                            window.sessionStorage.setItem('twodayvote', JSON.stringify(twoday));
-                            sun.style.top = '6.4rem';
-                            kill.style.backgroundColor = '#ccc';
-                            trianglea.style.borderRight = '.7rem solid #ccc';
-
-                        }
-
+        function votegenerate() {
+            var threeday = JSON.parse(sessionStorage.getItem('twodayvotekill'));
+            if (threeday == null) {
+                return
+            } else {
+                for (let i = 0; i < threeday.length; i++) {
+                    if (threeday[i].state == 'die') {
+                        voteResult.innerHTML = threeday[i].id + '号玩家被票出,真是身份吗是' + threeday[i].name;
+                        ghost.style.backgroundColor = '#ccc';
+                        triangleb.style.borderRight = '.7rem solid #ccc';
+                        player.style.backgroundColor = '#ccc';
+                        trianglec.style.borderRight = '.7rem solid #ccc';
+                        vote.style.backgroundColor = '#ccc';
+                        triangled.style.borderRight = '.7rem solid #ccc';
                     }
                 }
             }
         }
+
+        function generate() {
+            var twoday = JSON.parse(sessionStorage.getItem('twodaykill'));
+            if (twoday == null) {
+                return
+            } else {
+                for (let i = 0; i < twoday.length; i++) {
+                    if (twoday[i].state == 'die') {
+                        killResult.innerHTML = twoday[i].id + '号玩家被杀死，真实身份是好人';
+                        window.sessionStorage.setItem('twodayvote', JSON.stringify(twoday));
+                        sun.style.top = '6.4rem';
+                        kill.style.backgroundColor = '#ccc';
+                        trianglea.style.borderRight = '.7rem solid #ccc';
+                        return
+    
+                    }
+                    else {
+                        killResult.innerHTML = '杀手没有杀人'
+                    }
+                    window.sessionStorage.setItem('twodayvote', JSON.stringify(twoday));
+                    sun.style.top = '6.4rem';
+                    kill.style.backgroundColor = '#ccc';
+                    trianglea.style.borderRight = '.7rem solid #ccc';
+
+                }
+            }
+        }
+
         generate();
         votegenerate();
     }
@@ -272,64 +292,71 @@ function run() {
         }
         console.log(arr)
         window.sessionStorage.setItem('threeday', JSON.stringify(threedayif));
-        if (arr.length == 6) {
-            n += 1;
-            create();
-            all();
-            var kill = document.getElementsByClassName('kill')[n]; //杀人按钮节点
-            var matter = document.getElementsByClassName('matter')[n]; //列表节点
-            var killResult = document.getElementsByClassName('killResult')[n]; //杀人结果声明节点
-            var sun = document.getElementsByClassName('sun')[n]; //太阳图节点  
-            var ghost = document.getElementsByClassName('ghost')[n]; //亡灵遗言按钮节点
-            var player = document.getElementsByClassName('player')[n]; //玩家发言按钮节点
-            var vote = document.getElementsByClassName('vote')[n]; //投票按钮节点
-            var voteResult = document.getElementsByClassName('voteResult')[n]; //投票结果声明
-            var trianglea = document.getElementsByClassName('trianglea')[n]; //4个三角形节点
-            var triangleb = document.getElementsByClassName('triangleb')[n];
-            var trianglec = document.getElementsByClassName('trianglec')[n];
-            var triangled = document.getElementsByClassName('triangled')[n];
 
-            function votegenerate() {
-                var fourday = JSON.parse(sessionStorage.getItem('threedayvotekill'));
-                if (fourday == null) {
-                    return
-                } else {
-                    for (let i = 0; i < fourday.length; i++) {
-                        if (fourday[i].state == 'die') {
-                            voteResult.innerHTML = fourday[i].id + '号玩家被票出,真是身份吗是' + fourday[i].name;
-                            ghost.style.backgroundColor = '#ccc';
-                            triangleb.style.borderRight = '.7rem solid #ccc';
-                            player.style.backgroundColor = '#ccc';
-                            trianglec.style.borderRight = '.7rem solid #ccc';
-                            vote.style.backgroundColor = '#ccc';
-                            triangled.style.borderRight = '.7rem solid #ccc';
+        n += 1;
+        create();
+        all();
+        var kill = document.getElementsByClassName('kill')[n]; //杀人按钮节点
+        var matter = document.getElementsByClassName('matter')[n]; //列表节点
+        var killResult = document.getElementsByClassName('killResult')[n]; //杀人结果声明节点
+        var sun = document.getElementsByClassName('sun')[n]; //太阳图节点  
+        var ghost = document.getElementsByClassName('ghost')[n]; //亡灵遗言按钮节点
+        var player = document.getElementsByClassName('player')[n]; //玩家发言按钮节点
+        var vote = document.getElementsByClassName('vote')[n]; //投票按钮节点
+        var voteResult = document.getElementsByClassName('voteResult')[n]; //投票结果声明
+        var trianglea = document.getElementsByClassName('trianglea')[n]; //4个三角形节点
+        var triangleb = document.getElementsByClassName('triangleb')[n];
+        var trianglec = document.getElementsByClassName('trianglec')[n];
+        var triangled = document.getElementsByClassName('triangled')[n];
+
+        function votegenerate() {
+            var fourday = JSON.parse(sessionStorage.getItem('threedayvotekill'));
+            if (fourday == null) {
+                return
+            } else {
+                for (let i = 0; i < fourday.length; i++) {
+                    if (fourday[i].state == 'die') {
+                        voteResult.innerHTML = fourday[i].id + '号玩家被票出,真是身份吗是' + fourday[i].name;
+                        ghost.style.backgroundColor = '#ccc';
+                        triangleb.style.borderRight = '.7rem solid #ccc';
+                        player.style.backgroundColor = '#ccc';
+                        trianglec.style.borderRight = '.7rem solid #ccc';
+                        vote.style.backgroundColor = '#ccc';
+                        triangled.style.borderRight = '.7rem solid #ccc';
 
 
-                        }
                     }
                 }
-
             }
 
-            function generate() {
-                var threeday = JSON.parse(sessionStorage.getItem('threedaykill'));
-                if (threeday == null) {
-                    return
-                } else {
-                    for (let i = 0; i < threeday.length; i++) {
-                        if (threeday[i].state == 'die') {
-                            killResult.innerHTML = threeday[i].id + '号玩家被杀死，真实身份是好人';
-                            window.sessionStorage.setItem('threedayvote', JSON.stringify(threeday));
-                            sun.style.top = '6.4rem';
-                            kill.style.backgroundColor = '#ccc';
-                            trianglea.style.borderRight = '.7rem solid #ccc';
+        }
 
-                        }
+        function generate() {
+            var threeday = JSON.parse(sessionStorage.getItem('threedaykill'));
+            if (threeday == null) {
+                return
+            } else {
+                for (let i = 0; i < threeday.length; i++) {
+                    if (threeday[i].state == 'die') {
+                        killResult.innerHTML = threeday[i].id + '号玩家被杀死，真实身份是好人';
+                        window.sessionStorage.setItem('threedayvote', JSON.stringify(threeday));
+                        sun.style.top = '6.4rem';
+                        kill.style.backgroundColor = '#ccc';
+                        trianglea.style.borderRight = '.7rem solid #ccc';
+                        return
 
+                    } else {
+                        killResult.innerHTML = '杀手没有杀人'
                     }
+                    window.sessionStorage.setItem('threedayvote', JSON.stringify(threeday));
+                        sun.style.top = '6.4rem';
+                        kill.style.backgroundColor = '#ccc';
+                        trianglea.style.borderRight = '.7rem solid #ccc';
+
                 }
             }
         }
+
         generate();
         votegenerate();
     }
@@ -353,67 +380,74 @@ function run() {
         console.log(arr)
         window.sessionStorage.setItem('fourday', JSON.stringify(fourdayif));
 
-        if (arr.length == 12) {
-            n += 1;
-            create();
-            all();
-            var kill = document.getElementsByClassName('kill')[n]; //杀人按钮节点
-            var matter = document.getElementsByClassName('matter')[n]; //列表节点
-            var killResult = document.getElementsByClassName('killResult')[n]; //杀人结果声明节点
-            var sun = document.getElementsByClassName('sun')[n]; //太阳图节点  
-            var ghost = document.getElementsByClassName('ghost')[n]; //亡灵遗言按钮节点
-            var player = document.getElementsByClassName('player')[n]; //玩家发言按钮节点
-            var vote = document.getElementsByClassName('vote')[n]; //投票按钮节点
-            var voteResult = document.getElementsByClassName('voteResult')[n]; //投票结果声明
-            var trianglea = document.getElementsByClassName('trianglea')[n]; //4个三角形节点
-            var triangleb = document.getElementsByClassName('triangleb')[n];
-            var trianglec = document.getElementsByClassName('trianglec')[n];
-            var triangled = document.getElementsByClassName('triangled')[n];
+
+        n += 1;
+        create();
+        all();
+        var kill = document.getElementsByClassName('kill')[n]; //杀人按钮节点
+        var matter = document.getElementsByClassName('matter')[n]; //列表节点
+        var killResult = document.getElementsByClassName('killResult')[n]; //杀人结果声明节点
+        var sun = document.getElementsByClassName('sun')[n]; //太阳图节点  
+        var ghost = document.getElementsByClassName('ghost')[n]; //亡灵遗言按钮节点
+        var player = document.getElementsByClassName('player')[n]; //玩家发言按钮节点
+        var vote = document.getElementsByClassName('vote')[n]; //投票按钮节点
+        var voteResult = document.getElementsByClassName('voteResult')[n]; //投票结果声明
+        var trianglea = document.getElementsByClassName('trianglea')[n]; //4个三角形节点
+        var triangleb = document.getElementsByClassName('triangleb')[n];
+        var trianglec = document.getElementsByClassName('trianglec')[n];
+        var triangled = document.getElementsByClassName('triangled')[n];
 
 
 
-            function votegenerate() {
-                var fiveday = JSON.parse(sessionStorage.getItem('fourdayvotekill'));
+        function votegenerate() {
+            var fiveday = JSON.parse(sessionStorage.getItem('fourdayvotekill'));
 
 
-                if (fiveday == null) {
-                    return
-                } else {
-                    for (let i = 0; i < fiveday.length; i++) {
-                        if (fiveday[i].state == 'die') {
-                            voteResult.innerHTML = fiveday[i].id + '号玩家被票出,真是身份吗是' + fiveday[i].name;
-                            ghost.style.backgroundColor = '#ccc';
-                            triangleb.style.borderRight = '.7rem solid #ccc';
-                            player.style.backgroundColor = '#ccc';
-                            trianglec.style.borderRight = '.7rem solid #ccc';
-                            vote.style.backgroundColor = '#ccc';
-                            triangled.style.borderRight = '.7rem solid #ccc';
+            if (fiveday == null) {
+                return
+            } else {
+                for (let i = 0; i < fiveday.length; i++) {
+                    if (fiveday[i].state == 'die') {
+                        voteResult.innerHTML = fiveday[i].id + '号玩家被票出,真是身份吗是' + fiveday[i].name;
+                        ghost.style.backgroundColor = '#ccc';
+                        triangleb.style.borderRight = '.7rem solid #ccc';
+                        player.style.backgroundColor = '#ccc';
+                        trianglec.style.borderRight = '.7rem solid #ccc';
+                        vote.style.backgroundColor = '#ccc';
+                        triangled.style.borderRight = '.7rem solid #ccc';
 
 
-                        }
-                    }
-                }
-
-            }
-
-            function generate() {
-                var fourday = JSON.parse(sessionStorage.getItem('fourdaykill'));
-                if (fourday == null) {
-                    return
-                } else {
-                    for (let i = 0; i < fourday.length; i++) {
-                        if (fourday[i].state == 'die') {
-                            killResult.innerHTML = fourday[i].id + '号玩家被杀死，真实身份是好人';
-                            window.sessionStorage.setItem('fourdayvote', JSON.stringify(fourday));
-                            sun.style.top = '6.4rem';
-                            kill.style.backgroundColor = '#ccc';
-                            trianglea.style.borderRight = '.7rem solid #ccc';
-                        }
                     }
                 }
             }
 
         }
+
+        function generate() {
+            var fourday = JSON.parse(sessionStorage.getItem('fourdaykill'));
+            if (fourday == null) {
+                return
+            } else {
+                for (let i = 0; i < fourday.length; i++) {
+                    if (fourday[i].state == 'die') {
+                        killResult.innerHTML = fourday[i].id + '号玩家被杀死，真实身份是好人';
+                        window.sessionStorage.setItem('fourdayvote', JSON.stringify(fourday));
+                        sun.style.top = '6.4rem';
+                        kill.style.backgroundColor = '#ccc';
+                        trianglea.style.borderRight = '.7rem solid #ccc';
+                        return
+                    }else {
+                        killResult.innerHTML = '杀手没有杀人'
+                    }
+                    window.sessionStorage.setItem('fourdayvote', JSON.stringify(fourday));
+                        sun.style.top = '6.4rem';
+                        kill.style.backgroundColor = '#ccc';
+                        trianglea.style.borderRight = '.7rem solid #ccc';
+                }
+            }
+        }
+
+
 
         generate();
         votegenerate();
@@ -438,73 +472,80 @@ function run() {
         console.log(arr)
         window.sessionStorage.setItem('fiveday', JSON.stringify(fivedayif));
 
-        if (arr.length == 20) {
-            n += 1;
-            create();
-            all();
-            var kill = document.getElementsByClassName('kill')[n]; //杀人按钮节点
-            var matter = document.getElementsByClassName('matter')[n]; //列表节点
-            var killResult = document.getElementsByClassName('killResult')[n]; //杀人结果声明节点
-            var sun = document.getElementsByClassName('sun')[n]; //太阳图节点  
-            var ghost = document.getElementsByClassName('ghost')[n]; //亡灵遗言按钮节点
-            var player = document.getElementsByClassName('player')[n]; //玩家发言按钮节点
-            var vote = document.getElementsByClassName('vote')[n]; //投票按钮节点
-            var voteResult = document.getElementsByClassName('voteResult')[n]; //投票结果声明
-            var trianglea = document.getElementsByClassName('trianglea')[n]; //4个三角形节点
-            var triangleb = document.getElementsByClassName('triangleb')[n];
-            var trianglec = document.getElementsByClassName('trianglec')[n];
-            var triangled = document.getElementsByClassName('triangled')[n];
+
+        n += 1;
+        create();
+        all();
+        var kill = document.getElementsByClassName('kill')[n]; //杀人按钮节点
+        var matter = document.getElementsByClassName('matter')[n]; //列表节点
+        var killResult = document.getElementsByClassName('killResult')[n]; //杀人结果声明节点
+        var sun = document.getElementsByClassName('sun')[n]; //太阳图节点  
+        var ghost = document.getElementsByClassName('ghost')[n]; //亡灵遗言按钮节点
+        var player = document.getElementsByClassName('player')[n]; //玩家发言按钮节点
+        var vote = document.getElementsByClassName('vote')[n]; //投票按钮节点
+        var voteResult = document.getElementsByClassName('voteResult')[n]; //投票结果声明
+        var trianglea = document.getElementsByClassName('trianglea')[n]; //4个三角形节点
+        var triangleb = document.getElementsByClassName('triangleb')[n];
+        var trianglec = document.getElementsByClassName('trianglec')[n];
+        var triangled = document.getElementsByClassName('triangled')[n];
 
 
 
-            function votegenerate() {
-                var sixday = JSON.parse(sessionStorage.getItem('fivedayvotekill'));
+        function votegenerate() {
+            var sixday = JSON.parse(sessionStorage.getItem('fivedayvotekill'));
 
 
-                if (sixday == null) {
-                    return
-                } else {
-                    for (let i = 0; i < sixday.length; i++) {
-                        if (sixday[i].state == 'die') {
-                            voteResult.innerHTML = sixday[i].id + '号玩家被票出,真是身份吗是' + sixday[i].name;
-                            ghost.style.backgroundColor = '#ccc';
-                            triangleb.style.borderRight = '.7rem solid #ccc';
-                            player.style.backgroundColor = '#ccc';
-                            trianglec.style.borderRight = '.7rem solid #ccc';
-                            vote.style.backgroundColor = '#ccc';
-                            triangled.style.borderRight = '.7rem solid #ccc';
+            if (sixday == null) {
+                return
+            } else {
+                for (let i = 0; i < sixday.length; i++) {
+                    if (sixday[i].state == 'die') {
+                        voteResult.innerHTML = sixday[i].id + '号玩家被票出,真是身份吗是' + sixday[i].name;
+                        ghost.style.backgroundColor = '#ccc';
+                        triangleb.style.borderRight = '.7rem solid #ccc';
+                        player.style.backgroundColor = '#ccc';
+                        trianglec.style.borderRight = '.7rem solid #ccc';
+                        vote.style.backgroundColor = '#ccc';
+                        triangled.style.borderRight = '.7rem solid #ccc';
 
 
-                        }
-                    }
-                }
-
-            }
-
-            function generate() {
-                var fiveday = JSON.parse(sessionStorage.getItem('fivedaykill'));
-                if (fiveday == null) {
-                    return
-                } else {
-                    for (let i = 0; i < fiveday.length; i++) {
-                        if (fiveday[i].state == 'die') {
-                            killResult.innerHTML = fiveday[i].id + '号玩家被杀死，真实身份是好人';
-                            window.sessionStorage.setItem('fivedayvote', JSON.stringify(fiveday));
-                            sun.style.top = '6.4rem';
-                            kill.style.backgroundColor = '#ccc';
-                            trianglea.style.borderRight = '.7rem solid #ccc';
-                        }
                     }
                 }
             }
 
         }
 
+        function generate() {
+            var fiveday = JSON.parse(sessionStorage.getItem('fivedaykill'));
+            if (fiveday == null) {
+                return
+            } else {
+                for (let i = 0; i < fiveday.length; i++) {
+                    if (fiveday[i].state == 'die') {
+                        killResult.innerHTML = fiveday[i].id + '号玩家被杀死，真实身份是好人';
+                        window.sessionStorage.setItem('fivedayvote', JSON.stringify(fiveday));
+                        sun.style.top = '6.4rem';
+                        kill.style.backgroundColor = '#ccc';
+                        trianglea.style.borderRight = '.7rem solid #ccc';
+                        return
+                    }else {
+                        killResult.innerHTML = '杀手没有杀人'
+                    }
+                    window.sessionStorage.setItem('fivedayvote', JSON.stringify(fiveday));
+                        sun.style.top = '6.4rem';
+                        kill.style.backgroundColor = '#ccc';
+                        trianglea.style.borderRight = '.7rem solid #ccc';
+                }
+            }
+        }
+
+
+
         generate();
         votegenerate();
     }
-     //第五天
-     function compare4() {
+    //第五天
+    function compare4() {
         var sixdayif = JSON.parse(sessionStorage.getItem('fivedayvotekill'));
         console.log(sixdayif)
         if (sixdayif == null) {
@@ -523,75 +564,82 @@ function run() {
         console.log(arr)
         window.sessionStorage.setItem('sixday', JSON.stringify(sixdayif));
 
-        if (arr.length == 30) {
-            n += 1;
-            create();
-            all();
-            var kill = document.getElementsByClassName('kill')[n]; //杀人按钮节点
-            var matter = document.getElementsByClassName('matter')[n]; //列表节点
-            var killResult = document.getElementsByClassName('killResult')[n]; //杀人结果声明节点
-            var sun = document.getElementsByClassName('sun')[n]; //太阳图节点  
-            var ghost = document.getElementsByClassName('ghost')[n]; //亡灵遗言按钮节点
-            var player = document.getElementsByClassName('player')[n]; //玩家发言按钮节点
-            var vote = document.getElementsByClassName('vote')[n]; //投票按钮节点
-            var voteResult = document.getElementsByClassName('voteResult')[n]; //投票结果声明
-            var trianglea = document.getElementsByClassName('trianglea')[n]; //4个三角形节点
-            var triangleb = document.getElementsByClassName('triangleb')[n];
-            var trianglec = document.getElementsByClassName('trianglec')[n];
-            var triangled = document.getElementsByClassName('triangled')[n];
+
+        n += 1;
+        create();
+        all();
+        var kill = document.getElementsByClassName('kill')[n]; //杀人按钮节点
+        var matter = document.getElementsByClassName('matter')[n]; //列表节点
+        var killResult = document.getElementsByClassName('killResult')[n]; //杀人结果声明节点
+        var sun = document.getElementsByClassName('sun')[n]; //太阳图节点  
+        var ghost = document.getElementsByClassName('ghost')[n]; //亡灵遗言按钮节点
+        var player = document.getElementsByClassName('player')[n]; //玩家发言按钮节点
+        var vote = document.getElementsByClassName('vote')[n]; //投票按钮节点
+        var voteResult = document.getElementsByClassName('voteResult')[n]; //投票结果声明
+        var trianglea = document.getElementsByClassName('trianglea')[n]; //4个三角形节点
+        var triangleb = document.getElementsByClassName('triangleb')[n];
+        var trianglec = document.getElementsByClassName('trianglec')[n];
+        var triangled = document.getElementsByClassName('triangled')[n];
 
 
 
-            function votegenerate() {
-                var thday = JSON.parse(sessionStorage.getItem('sixdayvotekill'));
+        function votegenerate() {
+            var thday = JSON.parse(sessionStorage.getItem('sixdayvotekill'));
 
 
-                if (thday == null) {
-                    return
-                } else {
-                    for (let i = 0; i < thday.length; i++) {
-                        if (thday[i].state == 'die') {
-                            voteResult.innerHTML = thday[i].id + '号玩家被票出,真是身份吗是' + thday[i].name;
-                            ghost.style.backgroundColor = '#ccc';
-                            triangleb.style.borderRight = '.7rem solid #ccc';
-                            player.style.backgroundColor = '#ccc';
-                            trianglec.style.borderRight = '.7rem solid #ccc';
-                            vote.style.backgroundColor = '#ccc';
-                            triangled.style.borderRight = '.7rem solid #ccc';
+            if (thday == null) {
+                return
+            } else {
+                for (let i = 0; i < thday.length; i++) {
+                    if (thday[i].state == 'die') {
+                        voteResult.innerHTML = thday[i].id + '号玩家被票出,真是身份吗是' + thday[i].name;
+                        ghost.style.backgroundColor = '#ccc';
+                        triangleb.style.borderRight = '.7rem solid #ccc';
+                        player.style.backgroundColor = '#ccc';
+                        trianglec.style.borderRight = '.7rem solid #ccc';
+                        vote.style.backgroundColor = '#ccc';
+                        triangled.style.borderRight = '.7rem solid #ccc';
 
 
-                        }
-                    }
-                }
-
-            }
-
-            function generate() {
-                var sixday = JSON.parse(sessionStorage.getItem('sixdaykill'));
-                if (sixday == null) {
-                    return
-                } else {
-                    for (let i = 0; i < sixday.length; i++) {
-                        if (sixday[i].state == 'die') {
-                            killResult.innerHTML = sixday[i].id + '号玩家被杀死，真实身份是好人';
-                            window.sessionStorage.setItem('sixdayvote', JSON.stringify(sixday));
-                            sun.style.top = '6.4rem';
-                            kill.style.backgroundColor = '#ccc';
-                            trianglea.style.borderRight = '.7rem solid #ccc';
-                        }
                     }
                 }
             }
 
         }
 
+        function generate() {
+            var sixday = JSON.parse(sessionStorage.getItem('sixdaykill'));
+            if (sixday == null) {
+                return
+            } else {
+                for (let i = 0; i < sixday.length; i++) {
+                    if (sixday[i].state == 'die') {
+                        killResult.innerHTML = sixday[i].id + '号玩家被杀死，真实身份是好人';
+                        window.sessionStorage.setItem('sixdayvote', JSON.stringify(sixday));
+                        sun.style.top = '6.4rem';
+                        kill.style.backgroundColor = '#ccc';
+                        trianglea.style.borderRight = '.7rem solid #ccc';
+                        return
+                    }else {
+                        killResult.innerHTML = '杀手没有杀人'
+                    }
+                     window.sessionStorage.setItem('sixdayvote', JSON.stringify(sixday));
+                        sun.style.top = '6.4rem';
+                        kill.style.backgroundColor = '#ccc';
+                        trianglea.style.borderRight = '.7rem solid #ccc';
+                }
+            }
+        }
+
+
+
         generate();
         votegenerate();
     }
-     //第七天
-     function compare5() {
+    //第七天
+    function compare5() {
         var thdayif = JSON.parse(sessionStorage.getItem('sixdayvotekill'));
-        
+
         if (thdayif == null) {
             return
         }
@@ -608,92 +656,99 @@ function run() {
         console.log(arr)
         window.sessionStorage.setItem('thday', JSON.stringify(thdayif));
 
-        if (arr.length == 42) {
-            n += 1;
-            create();
-            all();
-            var kill = document.getElementsByClassName('kill')[n]; //杀人按钮节点
-            var matter = document.getElementsByClassName('matter')[n]; //列表节点
-            var killResult = document.getElementsByClassName('killResult')[n]; //杀人结果声明节点
-            var sun = document.getElementsByClassName('sun')[n]; //太阳图节点  
-            var ghost = document.getElementsByClassName('ghost')[n]; //亡灵遗言按钮节点
-            var player = document.getElementsByClassName('player')[n]; //玩家发言按钮节点
-            var vote = document.getElementsByClassName('vote')[n]; //投票按钮节点
-            var voteResult = document.getElementsByClassName('voteResult')[n]; //投票结果声明
-            var trianglea = document.getElementsByClassName('trianglea')[n]; //4个三角形节点
-            var triangleb = document.getElementsByClassName('triangleb')[n];
-            var trianglec = document.getElementsByClassName('trianglec')[n];
-            var triangled = document.getElementsByClassName('triangled')[n];
+
+        n += 1;
+        create();
+        all();
+        var kill = document.getElementsByClassName('kill')[n]; //杀人按钮节点
+        var matter = document.getElementsByClassName('matter')[n]; //列表节点
+        var killResult = document.getElementsByClassName('killResult')[n]; //杀人结果声明节点
+        var sun = document.getElementsByClassName('sun')[n]; //太阳图节点  
+        var ghost = document.getElementsByClassName('ghost')[n]; //亡灵遗言按钮节点
+        var player = document.getElementsByClassName('player')[n]; //玩家发言按钮节点
+        var vote = document.getElementsByClassName('vote')[n]; //投票按钮节点
+        var voteResult = document.getElementsByClassName('voteResult')[n]; //投票结果声明
+        var trianglea = document.getElementsByClassName('trianglea')[n]; //4个三角形节点
+        var triangleb = document.getElementsByClassName('triangleb')[n];
+        var trianglec = document.getElementsByClassName('trianglec')[n];
+        var triangled = document.getElementsByClassName('triangled')[n];
 
 
 
-            function votegenerate() {
-                var etday = JSON.parse(sessionStorage.getItem('thdayvotekill'));
+        function votegenerate() {
+            var etday = JSON.parse(sessionStorage.getItem('thdayvotekill'));
 
 
-                if (etday == null) {
-                    return
-                } else {
-                    for (let i = 0; i < etday.length; i++) {
-                        if (etday[i].state == 'die') {
-                            voteResult.innerHTML = etday[i].id + '号玩家被票出,真是身份吗是' + etday[i].name;
-                            ghost.style.backgroundColor = '#ccc';
-                            triangleb.style.borderRight = '.7rem solid #ccc';
-                            player.style.backgroundColor = '#ccc';
-                            trianglec.style.borderRight = '.7rem solid #ccc';
-                            vote.style.backgroundColor = '#ccc';
-                            triangled.style.borderRight = '.7rem solid #ccc';
+            if (etday == null) {
+                return
+            } else {
+                for (let i = 0; i < etday.length; i++) {
+                    if (etday[i].state == 'die') {
+                        voteResult.innerHTML = etday[i].id + '号玩家被票出,真是身份吗是' + etday[i].name;
+                        ghost.style.backgroundColor = '#ccc';
+                        triangleb.style.borderRight = '.7rem solid #ccc';
+                        player.style.backgroundColor = '#ccc';
+                        trianglec.style.borderRight = '.7rem solid #ccc';
+                        vote.style.backgroundColor = '#ccc';
+                        triangled.style.borderRight = '.7rem solid #ccc';
 
 
-                        }
-                    }
-                }
-
-            }
-
-            function generate() {
-                var thday = JSON.parse(sessionStorage.getItem('thdaykill'));
-                if (thday == null) {
-                    return
-                } else {
-                    for (let i = 0; i < thday.length; i++) {
-                        if (thday[i].state == 'die') {
-                            killResult.innerHTML = thday[i].id + '号玩家被杀死，真实身份是好人';
-                            window.sessionStorage.setItem('thdayvote', JSON.stringify(thday));
-                            sun.style.top = '6.4rem';
-                            kill.style.backgroundColor = '#ccc';
-                            trianglea.style.borderRight = '.7rem solid #ccc';
-                        }
                     }
                 }
             }
 
         }
+
+        function generate() {
+            var thday = JSON.parse(sessionStorage.getItem('thdaykill'));
+            if (thday == null) {
+                return
+            } else {
+                for (let i = 0; i < thday.length; i++) {
+                    if (thday[i].state == 'die') {
+                        killResult.innerHTML = thday[i].id + '号玩家被杀死，真实身份是好人';
+                        window.sessionStorage.setItem('thdayvote', JSON.stringify(thday));
+                        sun.style.top = '6.4rem';
+                        kill.style.backgroundColor = '#ccc';
+                        trianglea.style.borderRight = '.7rem solid #ccc';
+                        return
+                    }else {
+                        killResult.innerHTML = '杀手没有杀人'
+                    }
+                     window.sessionStorage.setItem('thdayvote', JSON.stringify(thday));
+                        sun.style.top = '6.4rem';
+                        kill.style.backgroundColor = '#ccc';
+                        trianglea.style.borderRight = '.7rem solid #ccc';
+                }
+            }
+        }
+
+
 
         generate();
         votegenerate();
     }
- //第八天
- function compare6() {
-    var etdayif = JSON.parse(sessionStorage.getItem('thdayvotekill'));
-    
-    if (etdayif == null) {
-        return
-    }
-    for (let i = 0; i < etdayif.length; i++) {
-        if (etdayif[i].state == 'die') {
-            etdayif[i].state = 'died';
+    //第八天
+    function compare6() {
+        var etdayif = JSON.parse(sessionStorage.getItem('thdayvotekill'));
 
+        if (etdayif == null) {
+            return
         }
-        if (etdayif[i].state == 'died') {
-            arr.push('死亡人')
+        for (let i = 0; i < etdayif.length; i++) {
+            if (etdayif[i].state == 'die') {
+                etdayif[i].state = 'died';
 
+            }
+            if (etdayif[i].state == 'died') {
+                arr.push('死亡人')
+
+            }
         }
-    }
-    console.log(arr)
-    window.sessionStorage.setItem('etday', JSON.stringify(etdayif));
+        console.log(arr)
+        window.sessionStorage.setItem('etday', JSON.stringify(etdayif));
 
-    if (arr.length == 56) {
+
         n += 1;
         create();
         all();
@@ -748,16 +803,23 @@ function run() {
                         sun.style.top = '6.4rem';
                         kill.style.backgroundColor = '#ccc';
                         trianglea.style.borderRight = '.7rem solid #ccc';
+                        return
+                    }else {
+                        killResult.innerHTML = '杀手没有杀人'
                     }
+                     window.sessionStorage.setItem('etdayvote', JSON.stringify(etday));
+                        sun.style.top = '6.4rem';
+                        kill.style.backgroundColor = '#ccc';
+                        trianglea.style.borderRight = '.7rem solid #ccc';
                 }
             }
         }
 
-    }
 
-    generate();
-    votegenerate();
-}
+
+        generate();
+        votegenerate();
+    }
 
 
     generate();

@@ -14,7 +14,6 @@ function allot() {
         } else {
             id[i].innerText = '狼人';
         }
-
     }
 }
 allot();

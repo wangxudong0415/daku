@@ -88,7 +88,7 @@ function  comparetwo(){
         
         }
     }
-    if (overarr.length == 3) {
+    
         begin.onclick = function () {
             if(a == undefined){
                alert('请选中玩家')
@@ -108,7 +108,7 @@ function  comparetwo(){
            
            window.location.href = '6.html';
        }
-    }
+    
 }
 function  comparetwo1(){
     if(threeday == null){
@@ -127,7 +127,7 @@ function  comparetwo1(){
             
         }
     }
-    if (overarr.length == 8) {
+   
         begin.onclick = function () {
             if(a == undefined){
                alert('请选中玩家')
@@ -147,7 +147,7 @@ function  comparetwo1(){
            
            window.location.href = '6.html';
        }
-    }
+    
 }
 
 function  comparetwo2(){
@@ -169,7 +169,7 @@ function  comparetwo2(){
         console.log(overarr)
     }
   
-    if (overarr.length == 15) {
+   
         begin.onclick = function () {
             if(a == undefined){
                alert('请选中玩家')
@@ -189,7 +189,7 @@ function  comparetwo2(){
            
            window.location.href = '6.html';
        }
-    }
+    
 }
 function  comparetwo3(){
     if(fiveday == null){
@@ -210,7 +210,6 @@ function  comparetwo3(){
         console.log(overarr)
     }
   
-    if (overarr.length == 24) {
         begin.onclick = function () {
             if(a == undefined){
                alert('请选中玩家')
@@ -230,7 +229,7 @@ function  comparetwo3(){
            
            window.location.href = '6.html';
        }
-    }
+    
 }
 function  comparetwo4(){
     if(sixday == null){
@@ -251,7 +250,7 @@ function  comparetwo4(){
         console.log(overarr)
     }
   
-    if (overarr.length == 35) {
+   
         begin.onclick = function () {
             if(a == undefined){
                alert('请选中玩家')
@@ -271,7 +270,7 @@ function  comparetwo4(){
            
            window.location.href = '6.html';
        }
-    }
+    
 }
 
 function  comparetwo5(){
@@ -293,7 +292,7 @@ function  comparetwo5(){
         console.log(overarr)
     }
   
-    if (overarr.length == 48) {
+    
         begin.onclick = function () {
             if(a == undefined){
                alert('请选中玩家')
@@ -313,7 +312,7 @@ function  comparetwo5(){
            
            window.location.href = '6.html';
        }
-    }
+    
 }
 function  comparetwo6(){
     if(etday == null){
@@ -334,7 +333,7 @@ function  comparetwo6(){
         console.log(overarr)
     }
   
-    if (overarr.length == 63) {
+    
         begin.onclick = function () {
             if(a == undefined){
                alert('请选中玩家')
@@ -354,7 +353,7 @@ function  comparetwo6(){
            
            window.location.href = '6.html';
        }
-    }
+    
 }
 
 

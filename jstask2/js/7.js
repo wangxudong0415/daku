@@ -75,10 +75,12 @@ function comparetwo() {
             id[i].style.backgroundColor = 'green';
         }
     }
-    if (overarr.length == 2) {
+    
         begin.onclick = function () {
             if(a == undefined){
-               alert('请选中玩家')
+                window.sessionStorage.setItem('twodaykill', JSON.stringify(twoday));   //改变后的twoday
+           
+           window.location.href = '6.html';
                return
            };
            if (twoday[a].state == 'died'){
@@ -99,7 +101,7 @@ function comparetwo() {
            
            window.location.href = '6.html';
        }
-    }
+    
 
 }
 
@@ -115,10 +117,12 @@ function comparetwo1() {
            id[i].style.backgroundColor = 'green';
        }
    }
-   if (overarr.length == 6) {
+   
        begin.onclick = function () {
            if(a == undefined){
-              alert('请选中玩家')
+            window.sessionStorage.setItem('threedaykill', JSON.stringify(threeday));   //改变后的threeday
+          
+            window.location.href = '6.html';
               return
           };
           if (threeday[a].state == 'died'){
@@ -139,7 +143,7 @@ function comparetwo1() {
           
           window.location.href = '6.html';
       }
-   }
+   
 
 }
 function comparetwo2() {
@@ -154,10 +158,12 @@ function comparetwo2() {
            id[i].style.backgroundColor = 'green';
        }
    }
-   if (overarr.length == 12) {
+  
        begin.onclick = function () {
            if(a == undefined){
-              alert('请选中玩家')
+            window.sessionStorage.setItem('fourdaykill', JSON.stringify(fourday));   //改变后的threeday
+          
+            window.location.href = '6.html';
               return
           };
           if (fourday[a].state == 'died'){
@@ -178,7 +184,7 @@ function comparetwo2() {
           
           window.location.href = '6.html';
       }
-   }
+   
 
 }
 function comparetwo3() {
@@ -193,10 +199,12 @@ function comparetwo3() {
            id[i].style.backgroundColor = 'green';
        }
    }
-   if (overarr.length == 20) {
+   
        begin.onclick = function () {
            if(a == undefined){
-              alert('请选中玩家')
+            window.sessionStorage.setItem('fivedaykill', JSON.stringify(fiveday));   //改变后的threeday
+          
+            window.location.href = '6.html';
               return
           };
           if (fiveday[a].state == 'died'){
@@ -217,7 +225,7 @@ function comparetwo3() {
           
           window.location.href = '6.html';
       }
-   }
+   
 
 }
 function comparetwo4() {
@@ -232,10 +240,12 @@ function comparetwo4() {
            id[i].style.backgroundColor = 'green';
        }
    }
-   if (overarr.length == 30) {
+   
        begin.onclick = function () {
            if(a == undefined){
-              alert('请选中玩家')
+            window.sessionStorage.setItem('sixdaykill', JSON.stringify(sixday));   //改变后的threeday
+          
+            window.location.href = '6.html';
               return
           };
           if (sixday[a].state == 'died'){
@@ -256,7 +266,7 @@ function comparetwo4() {
           
           window.location.href = '6.html';
       }
-   }
+   
 
 }
 
@@ -272,10 +282,12 @@ function comparetwo5() {
            id[i].style.backgroundColor = 'green';
        }
    }
-   if (overarr.length == 42) {
+   
        begin.onclick = function () {
            if(a == undefined){
-              alert('请选中玩家')
+            window.sessionStorage.setItem('thdaykill', JSON.stringify(thday));   //改变后的threeday
+          
+            window.location.href = '6.html';
               return
           };
           if (thday[a].state == 'died'){
@@ -295,7 +307,7 @@ function comparetwo5() {
           
           window.location.href = '6.html';
       }
-   }
+   
 
 }
 
@@ -311,10 +323,12 @@ function comparetwo6() {
            id[i].style.backgroundColor = 'green';
        }
    }
-   if (overarr.length == 56) {
+   
        begin.onclick = function () {
            if(a == undefined){
-              alert('请选中玩家')
+            window.sessionStorage.setItem('etdaykill', JSON.stringify(etday));   
+          
+            window.location.href = '6.html';
               return
           };
           if (etday[a].state == 'died'){
@@ -330,11 +344,11 @@ function comparetwo6() {
             etday[a].state = 'die';
          
           
-          window.sessionStorage.setItem('etdaykill', JSON.stringify(etday));   //改变后的threeday
+          window.sessionStorage.setItem('etdaykill', JSON.stringify(etday));   
           
           window.location.href = '6.html';
       }
-   }
+   
 
 }
 
@@ -368,7 +382,9 @@ for (let i = 0; i < box.length; i++) {
 
 begin.onclick = function () {
      if(a == undefined){
-        alert('请选中玩家')
+        window.sessionStorage.setItem('onedaykill', JSON.stringify(arr));
+    
+        window.location.href = '6.html';
         return
     };
     if (arr[a].state == 'died'){
@@ -383,7 +399,7 @@ begin.onclick = function () {
       
       arr[a].state = 'die';
       
-      console.log(arr)
+      
     
     window.sessionStorage.setItem('onedaykill', JSON.stringify(arr));
     
