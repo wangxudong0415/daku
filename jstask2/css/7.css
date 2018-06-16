@@ -28,9 +28,11 @@ header {
   border-bottom: solid #fff .07rem;
 }
 header img {
+  visibility: hidden;
   width: .8rem;
   margin-left: .5rem;
   padding-right: .8rem;
+  background: #29bde0;
 }
 header div {
   position: relative;
