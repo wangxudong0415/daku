@@ -144,3 +144,6 @@ button + div div button {
 button + div div button:nth-child(2) {
   border-right: solid .07rem #ccc;
 }
+#pop-up {
+  display: none;
+}

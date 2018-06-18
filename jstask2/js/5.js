@@ -1,60 +1,38 @@
-var data2 = JSON.parse(localStorage.getItem('identity'));
-var data1 = (localStorage.getItem('sum'));
-var box = document.getElementsByClassName('box');
-var id = document.getElementsByClassName('id');
-var begin = document.getElementById('begin');
-var arr = []
-console.log(arr)
-
-var homepage = document.getElementById('homepage');
-var back = document.getElementById('back');
-back.onclick = function back() {
-    window.location.href = '4.html';
-}
-
-
-
-homepage.onclick = function backHome() {
+var data2 = JSON.parse(localStorage.getItem('identity'));   //好人换人数组
+var data1 = (localStorage.getItem('sum'));       //总人数
+var arr = []                             //建立空数组  往里添加对象
+$("#back").click(function back() {       //返回按钮
+    $(location).attr('href', '4.html');
+})
+$("#homepage").click(function backHome() {    //关闭按钮
     sessionStorage.clear();
     if (confirm("确定关闭游戏嘛")) {
-        window.location.href = '1.html';
+        $(location).attr('href', '1.html');
     }
-
-}
-function allot() {
-
-    for (i = 0; i < data1; i++) {
-        box[i].style.display = 'block';
-        if (data2[i] == '好人') {
-            id[i].innerText = '平民';
-            var obj = {
-                id: i+1,
-                name: '平民',
-                state: 'live',
-                day: 1,
-  
-                
-            };
-            arr.push(obj);
-
-        } else {
-            id[i].innerText = '狼人';
-            var obj = {
-                id: i+1,
-                name: '狼人',
-                state: 'live',
-                day: 1,
-               
-            }
-            arr.push(obj);
+})
+for (i = 0; i < data1; i++) {                   //循环数组总数  添加对象
+    $(".box")[i].style.display = "block";
+    if (data2[i] == '好人') {
+        $(".id")[i].innerHTML ='平民';
+        var obj = {
+            id: i + 1,
+            name: '平民',
+            state: 'live',
+            day: 1,
+        };
+        arr.push(obj);
+    } else {
+        $(".id")[i].innerHTML ='狼人';
+        var obj = {
+            id: i + 1,
+            name: '狼人',
+            state: 'live',
+            day: 1,
         }
+        arr.push(obj);
     }
-}
-allot();
-
-begin.onclick = function go() {
-    window.location.href = '6.html';
-}
-
-
-sessionStorage.setItem('data', JSON.stringify(arr));
+} 
+sessionStorage.setItem('data', JSON.stringify(arr));    //保存对象数组
+$("#begin").click(function go() {
+    $(location).attr('href', '6.html');      //下一步按钮
+})

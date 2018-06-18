@@ -73,7 +73,7 @@ header + div img:last-child {
   width: 8rem;
   margin: 6rem auto 0;
 }
-header + div span:nth-child(4) {
+header + div p {
   display: none;
 }
 button {
