@@ -228,8 +228,8 @@ label {
     border: .1rem solid #dbdbdc;
     background: #f8f9fb;
     border-radius: 50%;
-    transition: border-color .3s;
-    -webkit-transition: border-color .3s;
+    transition: border-color 1s;
+    -webkit-transition: border-color 1s;
 }
 
 .choice .radio input:checked+i {

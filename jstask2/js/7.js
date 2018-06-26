@@ -9,7 +9,7 @@ $("#homepage").click(function backHome() {               //关闭按钮
     if (confirm("确定关闭游戏嘛 ")) {
         $(location).attr('href', '1.html');
     }
-})
+});
  for ( let i = 0; i < data.length; i++) {             //循环生成所有玩家盒子 和身份
         $(box[i]).css('display','block');
         if (data[i] == '好人') {
@@ -19,11 +19,11 @@ $("#homepage").click(function backHome() {               //关闭按钮
            $(id[i]).html('狼人');
          }
      }
-for (let i = 0; i < box.length; i++) {               //给所有盒子设置点击事件  然后根据点击的i值 传个一个变量 获取变量好知道点击的哪一个盒子
-    $(box[i]).click(function () {
-         a = i;
+
+    $(".box").click(function () {
+         a = $(this).index();
     })
-}
+
     for (let i = 0; i < data.length; i++) {        //死了的玩家上颜色
          if (arr[i].state == 'died') {
             $(id[i]).css('backgroundColor','green');
@@ -33,7 +33,7 @@ if(arr1 == null) {           //第一天进来 使空的所以需要定义成空
     arr1= [];
 }
 $("#begin").click(function () {                //杀死按钮
-     if(a == undefined){                         //没杀人执行的操作
+     if(!a){                         //没杀人执行的操作
         arr1.push('杀手没有杀人');
         sessionStorage.setItem('data3', JSON.stringify(arr1));
         window.sessionStorage.setItem('data', JSON.stringify(arr));

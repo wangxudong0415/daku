@@ -13,6 +13,7 @@ $("#homepage").click(function backHome() {  //关闭按钮
         $(location).attr('href', '1.html');
     }
 })
+
 $("#transmit").click(function paga() { //翻页按钮函数
     $("#look").show();
     $(this).hide();
@@ -21,15 +22,17 @@ $("#transmit").click(function paga() { //翻页按钮函数
     $("#id").hide()
     $("#play").show();
     $("#number").text(num);
-    num += 1;
-    $("#number1").text(num); 
+     
     if (num == data) { //最后一张实现法官查看
         $("#transmit").html("法官查看");
     }
     if (num - 1 == data) { //最后一个按钮实现跳转
         $(location).attr('href', '5.html');
     }
+    num += 1;
+    $("#number1").text(num);
 })
+
 $("#look").click(function check() { //查看按钮 函数
     $("#look").hide();
     $("#transmit").show();

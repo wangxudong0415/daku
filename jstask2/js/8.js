@@ -26,13 +26,11 @@ for (let i = 0; i < data.length; i++) {                 //循环给死亡玩家�
         $(id[i]).css('backgroundColor','green');
     }
 }
-for (let i = 0; i < box.length; i++) {             ///给所有盒子设置点击事件  然后根据点击的i值 传个一个变量 获取变量好知道点击的哪一个盒子
-    $(box[i]).click(function () {
-        a = i;
-    })
-}
+$(".box").click(function () {
+    a = $(this).index();
+});
 $("#begin").click(function () {                     //投票按钮
-    if (a == undefined) {
+    if (!a) {
         alert('请选中玩家')
         return
     };

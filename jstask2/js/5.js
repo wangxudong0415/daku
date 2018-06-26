@@ -9,9 +9,20 @@ $("#homepage").click(function backHome() {    //关闭按钮
     if (confirm("确定关闭游戏嘛")) {
         $(location).attr('href', '1.html');
     }
-})
-for (i = 0; i < data1; i++) {                   //循环数组总数  添加对象
+});
+
+for (let i = 0; i < data1; i++) {
+    $(".overall").append(`<div class="box">
+    <div>
+        <span class="id"></span>
+        <span class="number">1号</span>
+        <ul>
+            <li class="option4"></li>
+        </ul>
+    </div>
+</div>`) 
     $(".box")[i].style.display = "block";
+    $(".number")[i].innerHTML = i+1 +"号";
     if (data2[i] == '好人') {
         $(".id")[i].innerHTML ='平民';
         var obj = {

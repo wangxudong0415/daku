@@ -15,7 +15,6 @@ if (n == null) {                              //有多少人活着  好人坏人
     $("#good").html('好人存活' + n);
     $("#bad").html('坏人存活' + m);
 }
-
 if (n == m && n != null) {                      //好人 坏人胜利  游戏直接结束  分别不同的图片
     $("#img").attr("src", "img/ssvtr.png");
 } else if (m == 0) {
