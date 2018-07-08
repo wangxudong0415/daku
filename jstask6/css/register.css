@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+main {
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  background: url(../img/ntad.png) no-repeat center;
+  background-size: cover;
+}
+.box {
+  width: 18rem;
+  height: 13rem;
+  margin: auto;
+  margin-top: 15rem;
+  background: #ccc;
+}
+.box > div {
+  width: 80%;
+  margin: .5rem auto;
+}
+.box > :nth-child(2) {
+  background:  url(../img/man.png) 3% 26% no-repeat  #fff;
+}
+.box > :nth-child(3) {
+  background:  url(../img/lock.png) 3.6% 28% no-repeat  #fff;
+}
+.box input {
+  outline: none;
+  border: none;
+}
+.box button {
+  width: 15rem;
+  line-height: 2.5rem;
+  margin: 1rem auto;
+  background: blue;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+}
+#no {
+  display: block;
+  height: 1.5rem;
+  line-height: 1.5rem;
+}

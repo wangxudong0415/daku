@@ -19,7 +19,7 @@ $("#transmit").click(function paga() { //翻页按钮函数
     $(this).hide();
     $("#good").hide();
     $("#bad").hide();
-    $("#id").hide()
+    $("#id").hide();
     $("#play").show();
     $("#number").text(num);
      

@@ -1,0 +1,32 @@
+<header>
+    <strong class="text-center">萝卜多后台管理系统</strong>
+    <div>
+        <span>
+            <a href="">管理员</a>
+        </span>
+        <span>
+            <a href="">admin</a>
+        </span>
+        <img src="img/close.png" alt="">
+    </div>
+</header>
+<ul class="menu" ng-controller="personCtrl" >
+    <li ng-repeat="x in listDown" >
+        <div class="list" ng-click="toggle($index)" ng-class="{'color':x.show}">
+            <img src="img/pencil.png">
+            <span>{{x.name}}</span>
+            <i></i>
+        </div>
+        <ul >
+            <li class="list" ng-class="{'show':x.lala, 'color':y.show1}" ng-repeat="y in x.child" ng-click="toggle1($index)">{{y.name}}</li>
+            
+        </ul>
+    </li>
+   
+</ul>
+<div class="content" ng-controller="conten" >
+<div ui-view="content">
+</div>
+
+
+</div>
