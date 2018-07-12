@@ -7,7 +7,7 @@ routerApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvid
         .state('register', {
             url: '/register',
             templateUrl: 'register.html',
-            // controller:'goList'
+            controller:'reg'
         })
 
         .state('list', {
@@ -45,7 +45,7 @@ routerApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvid
             url: '/3',
             views:{
                'content@list': {
-                    templateUrl:'3.html',
+                    templateUrl:'article.html',
                     
                 }, 
             },

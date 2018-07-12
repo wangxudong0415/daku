@@ -1,5 +1,5 @@
 // angular.module('routerApp')
-//     .controller('goto', function ($scope,$state) {
+//     .controller('', function ($scope,$state) {
 //       $scope.
     
 

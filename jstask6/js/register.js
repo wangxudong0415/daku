@@ -1,19 +1,22 @@
 var myModule = angular.module("routerApp");
-myModule.controller("routerApp",["$scope","$http",function HelloAjax($scope,$http){
- $scope.user={};
-  $scope.get_more = function(){
+myModule.controller("reg",  function ($scope, $http,$state) {
+  $scope.gohome = function () {
+    console.log($scope.user)
     $http({
-        method: "POST",
-        url: "/carrots-admin-ajax/a/login",
+      method: "POST",
+      url: "/carrots-admin-ajax/a/login",
+      params: $scope.user
+    }).then(function (res) {
+      console.log(res)
+      if(res.data.code == 0) {
+        $state.go('list')
+      }
+      else{
         
-      }).
-      success(function(data, status) {
-       //$scope.status = status;
-        $scope.users = data;
-      }).
-      error(function(data, status) {
-       //$scope.data = data || "Request failed";
-       //$scope.status = status;
-     });
-   }
-}]);
+      }
+      
+    })
+
+
+  };
+});

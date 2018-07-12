@@ -1,10 +1,7 @@
 $("button").click(function () {
-    var id = $(":text").val();
-    var password = $(":password").val();
-    var gather = {
-        name: id,
-        pwd: password
-    }
+    var name = $(":text").val();
+    var pwd = $(":password").val();
+   
     var xmlhttp;
 
     xmlhttp = new XMLHttpRequest();
@@ -17,5 +14,5 @@ $("button").click(function () {
     }
     xmlhttp.open("POST", "/carrots-admin-ajax/a/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send($.param(gather));
+    xmlhttp.send('name='+name+'&pwd='+pwd);
 })

@@ -10,6 +10,7 @@
         <img src="img/close.png" alt="">
     </div>
 </header>
+<div class="ulbox">
 <ul class="menu" ng-controller="personCtrl" >
     <li ng-repeat="x in listDown" >
         <div class="list" ng-click="toggle($index)" ng-class="{'color':x.show}">
@@ -24,8 +25,11 @@
     </li>
    
 </ul>
-<div class="content" ng-controller="conten" >
+
+</div>
+<div class="content" ng-controller="content" >
 <div ui-view="content">
+    
 </div>
 
 
