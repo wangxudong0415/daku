@@ -60,12 +60,7 @@ angular.module('routerApp')
              
              $(".list").removeClass('color');
             $scope.listDown[index1].child[index].show1 = true ;
-            if(index1==0 && index == 0){
-                $state.go('list.1')
-            }
-            if(index1==0 && index ==1){
-                $state.go('list.2')
-            }
+            
             if(index1==1 && index ==0){
                 $state.go('list.3')
             }

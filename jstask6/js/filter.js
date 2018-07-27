@@ -24,3 +24,13 @@ var routerApp = angular.module('routerApp')
         }
     }
 })
+.filter('statusbnt', function (){
+    return function(status){
+        if(status == 1){
+            return "上线"
+        }
+        else{
+            return "下线"
+        }
+    }
+})

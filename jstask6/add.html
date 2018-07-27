@@ -1,0 +1,67 @@
+<div class="add">
+    <form name="myform">
+        <p>新增Article</p>
+        <div>
+            <div>
+                <span>标题名称</span>
+                <input type="text" name="name" ng-model="user.title">
+
+            </div>
+            <div>
+
+                <span>类&emsp;&emsp;型</span>
+                <select ng-model="user.type" ng-options="types.id as types.name for types in typeList"></select>
+                <select ng-model="user.industry" ng-options="industry.id as industry.name for industry in industrylist" ng-show="user.type ==3"></select>
+            </div>
+            <div>
+                <span>说&emsp;&emsp;明</span>
+                <input ng-model="user.content" type="text">
+            </div>
+            <div>
+                <span>跳转链接</span>
+                <input ng-model="user.url" type="text">
+            </div>
+            <div>
+                <span class="img-span">配&emsp;&emsp;图</span>
+                <label for="file">上传图片</label>
+                <input ng-model="file" type="file" id="file" onchange="angular.element(this).scope().change()">
+
+                <div>
+
+                    <img id="img" alt="图片浏览" src="{{imgname}}">
+
+                </div>
+                <table>
+                    <tr>
+                        <th>图片名</th>
+                        <th>文件大小</th>
+                        <th>进度</th>
+                        <th>操作</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr>
+                        <td ng-model="name1">{{name1}}</td>
+                        <td ng-bind="fileSize"></td>
+                        <td>
+                            <div ng-class="{'progress': bar}"></div>
+                        </td>
+                        <td>
+                            <button ng-click="uploading()" ng-disabled="!file || user.img">上传</button>
+                        </td>
+                        <td>
+                            <button ng-click="deleteimg()" ng-disabled="!file">删除</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        
+    </form>
+<div>
+        <button ng-click="up()" ng-disabled="!user.title || !user.url || !user.type ||!user.img || user.type ==3 && user.industry == undefined ">立即上线</button>
+        <button ng-click="down()" ng-disabled="!user.title || !user.url || !user.type ||!user.img || user.type ==3 && user.industry == undefined ">存为草稿</button>
+        <button ng-click="back()">取消</button>
+    </div>
+
+    </div>
+</div>

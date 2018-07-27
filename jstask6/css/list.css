@@ -30,7 +30,7 @@ header div span {
 }
 header div span a::after {
   content: "";
-  border-right: #e8e8e8 solid  2px;
+  border-right: #e8e8e8 solid 2px;
   margin-left: 15px;
 }
 header::after {
@@ -111,4 +111,56 @@ li {
   min-height: calc(100vh - 50px) ;
   padding: 30px 30px 0 30px;
   background: #f5f5f5;
+}
+.add p {
+  border: solid 1px #ccc;
+  background: #f5f5f5;
+  padding: 10px 15px;
+  margin: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.add form > div {
+  background: #fff;
+  padding: 15px;
+}
+.add form > div div {
+  margin-bottom: 15px;
+}
+.add form > div div div {
+  width: 70%;
+  margin-left: 100px;
+}
+.add form > div span {
+  padding: 0 20px;
+}
+.add form > div input {
+  width: 70%;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.add table {
+  text-align: center;
+  margin-left: 100px;
+}
+.add table td div {
+  width: 0 !important;
+  height: 20px;
+  margin: 0 !important;
+  background: green;
+  transition: all .5s;
+}
+.add #file {
+  display: none;
+}
+.add #img {
+  max-width: 100%;
+}
+.add label {
+  background: #ccc;
+  padding: 5px;
+}
+.add .progress {
+  width: 100% !important;
 }

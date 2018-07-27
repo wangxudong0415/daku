@@ -1,69 +1,67 @@
 .all {
     overflow: hidden;
-   min-height: 100vh;
+    min-height: 100vh;
 }
-header {
-   strong {
-       float: left;
-       width: 250px;
-       height: 50px;
-       line-height: 50px;
-       font-size: 18px;
-       color: #fff;
-       border-bottom: solid #ccc 1px;
-       background: rgb(35, 42, 58);
-   }
-   span {
-       color: blue;
-   }
-   div{
-       float: right;
-       height: 50px;
-       line-height: 50px;
-       img {
-           width: 15px;
-           height: 15px;
-           margin-right: 20px;
-       }
-       span {
-           margin-right: 20px;
 
-           a{
-           &::after {
-              content: "";
-              border-right: #e8e8e8 solid  2px;
-              margin-left: 15px;
-           }
+header {
+    strong {
+        float: left;
+        width: 250px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        color: #fff;
+        border-bottom: solid #ccc 1px;
+        background: rgb(35, 42, 58);
+    }
+    span {
+        color: blue;
+    }
+    div {
+        float: right;
+        height: 50px;
+        line-height: 50px;
+        img {
+            width: 15px;
+            height: 15px;
+            margin-right: 20px;
         }
-       }
-   }
-   &::after {
-       content: "";
-       clear: both;
-       display: table;
-   }
+        span {
+            margin-right: 20px;
+            a {
+                &::after {
+                    content: "";
+                    border-right: #e8e8e8 solid 2px;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
 }
-ul,li {
+
+ul,
+li {
     outline: none;
     list-style: none;
     margin: 0 !important;
     padding: 0;
 }
-.ulbox {  
-     width: 250px;
+
+.ulbox {
+    width: 250px;
     float: left;
     padding-bottom: 3000px;
     margin-bottom: -3000px;
     background: rgb(35, 42, 58);
-   
 }
+
 .menu {
-   
-  
-    
-    
     color: #fff;
-    
     div {
         position: relative;
         line-height: 40px;
@@ -76,21 +74,20 @@ ul,li {
             font-size: 16px;
             vertical-align: middle;
         }
-    } 
-        img {
-            width: 16px;
-            height: 16px;
-            margin: 0 20px;
-            vertical-align: middle;
+    }
+    img {
+        width: 16px;
+        height: 16px;
+        margin: 0 20px;
+        vertical-align: middle;
+    }
+    li li {
+        font-size: 14px;
+        &:hover {
+            background: rgba(255, 255, 255, 0.4);
         }
-        
-       li li {
-            font-size: 14px;
-            &:hover{
-               background:  rgba(255, 255, 255, 0.4);
-            }
-        }
-    i{
+    }
+    i {
         position: absolute;
         top: 50%;
         left: 200px;
@@ -98,14 +95,11 @@ ul,li {
         height: 10px;
         border-bottom: solid #fff 2px;
         border-left: solid #fff 2px;
-        transform:translateY(-50%) rotate(45deg);
-       
+        transform: translateY(-50%) rotate(45deg);
     }
     ul {
         overflow: hidden;
         text-align: center;
-        
-        
         li {
             height: 40px;
             line-height: 40px;
@@ -113,17 +107,77 @@ ul,li {
         }
     }
 }
-.color {
-    background:  rgba(255, 255, 255, 0.4);
-}
-.show {
-   height: 0 !important;
 
+.color {
+    background: rgba(255, 255, 255, 0.4);
 }
+
+.show {
+    height: 0 !important;
+}
+
 .content {
     float: left;
-    width:~"calc(100% - 250px)";
-   min-height: ~"calc(100vh - 50px) ";
+    width: ~"calc(100% - 250px)";
+    min-height: ~"calc(100vh - 50px) ";
     padding: 30px 30px 0 30px;
     background: #f5f5f5;
+}
+
+.add {
+    
+    p {
+        border: solid 1px #ccc;
+        background: #f5f5f5;
+        padding: 10px 15px;
+        margin: 0;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    form>div {
+        background: #fff;
+        padding: 15px;
+        div {
+            margin-bottom: 15px;
+            div {
+                width: 70%;
+                margin-left: 100px;
+            }
+        }
+        span {
+            padding: 0 20px;
+        }
+        input {
+            width: 70%;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    }
+    table {
+        text-align: center;
+        margin-left: 100px;
+        td {
+            div {
+                width: 0 !important;
+                height: 20px;
+                margin: 0 !important;
+                background: green;
+                transition: all .5s;
+            }
+        }
+    }
+    #file {
+        display: none;
+    }
+    #img {
+        max-width: 100%;
+    }
+    label {
+        background: #ccc;
+        padding: 5px;
+    }
+    .progress {
+        width: 100% !important;
+    }
 }
