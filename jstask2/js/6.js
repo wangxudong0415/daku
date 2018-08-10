@@ -15,7 +15,8 @@ $("#homepage").click(function () {            //关闭按钮
     }
 });
 var m = 0;                                              //用来点击加1 
-function create() {                                 //这个函数 是动态生成列表内容   天数 和天数那里点击事件
+function create() {   
+                                  //这个函数 是动态生成列表内容   天数 和天数那里点击事件
     var num = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"]
     $("#list").append( `<span class="day"></span>
     <div class="matter">

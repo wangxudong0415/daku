@@ -45,7 +45,7 @@ function operation() {
     $("#good").html(arr[1]);
     
     var arr1 = []; //建立局部空数组方便使用
-    for (let i = 0; i < arr[0]; i++) { //循环出坏人有几个就传入空数组b几个
+    for (let i = 0; i < arr[0]; i++) { //循环出坏人有几个就传入空数组b几个 
         arr1.push('狼人');
     }
     for (let i = 0; i < arr[1]; i++) { //循环出好人有几个就传入空数组b几个

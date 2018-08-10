@@ -64,7 +64,7 @@
                     <a type="button" ng-click="updown($index)">{{x.status | statusbnt}}</a>
                 </td>
                 <td>
-                    <a type="button" >编辑</a>
+                    <a type="button" ui-sref="list.add({id:x.id})">编辑</a>
                 </td>
                 <td>
                     <a type="button" ng-click="delete($index)">删除</a>
@@ -73,4 +73,7 @@
         </table>
     </div>
 
+</div>
+<div class="M-box3"></div>
+  
 </div>

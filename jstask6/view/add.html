@@ -5,10 +5,8 @@
             <div>
                 <span>标题名称</span>
                 <input type="text" name="name" ng-model="user.title">
-
             </div>
             <div>
-
                 <span>类&emsp;&emsp;型</span>
                 <select ng-model="user.type" ng-options="types.id as types.name for types in typeList"></select>
                 <select ng-model="user.industry" ng-options="industry.id as industry.name for industry in industrylist" ng-show="user.type ==3"></select>
@@ -49,17 +47,15 @@
                             <button ng-click="uploading()" ng-disabled="!file || user.img">上传</button>
                         </td>
                         <td>
-                            <button ng-click="deleteimg()" ng-disabled="!file">删除</button>
+                            <button ng-click="deleteimg()" ng-disabled="!file && !user.img">删除</button>
                         </td>
                     </tr>
                 </table>
             </div>
-
-        
     </form>
 <div>
-        <button ng-click="up()" ng-disabled="!user.title || !user.url || !user.type ||!user.img || user.type ==3 && user.industry == undefined ">立即上线</button>
-        <button ng-click="down()" ng-disabled="!user.title || !user.url || !user.type ||!user.img || user.type ==3 && user.industry == undefined ">存为草稿</button>
+        <button ng-click="up(2)" ng-disabled="!user.title || !user.url || user.type ==undeifned ||!user.img || user.type ==3 && user.industry == undefined ">立即上线</button>
+        <button ng-click="up(1)" ng-disabled="!user.title || !user.url || user.type ==undeifned  ||!user.img || user.type ==3 && user.industry == undefined ">存为草稿</button>
         <button ng-click="back()">取消</button>
     </div>
 

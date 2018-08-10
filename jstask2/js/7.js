@@ -20,6 +20,8 @@ $("#homepage").click(function backHome() {               //关闭按钮
          }
      }
 
+
+     
     $(".box").click(function () {
          a = $(this).index();
     })
